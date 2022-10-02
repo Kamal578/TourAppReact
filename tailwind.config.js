@@ -42,9 +42,11 @@ module.exports = {
       colors:{
         'green':'#2EEF59',
         'green-border':'#2AEE55',
+        'darkerGreen':'#075B19',
       },
       backgroundImage: {
         'hero-bg': "url('/src/assets/img/home-hero-bg.png')",
+        'tour': "url('/src/assets/img/tour1.jpg')"
       },
       fontFamily:{
         'primary': ['Montserrat', 'system-ui', 'sans-serif'],

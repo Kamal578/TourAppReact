@@ -2,4 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("css/_fonts.css");
+@import url("css/helpers.css");
+
+@layer components {
+    .header-link {
+        @apply text-white font-primary border-b-2 border-transparent hover:border-b-2 hover:border-green transition-all duration-300;
+    }
+}
