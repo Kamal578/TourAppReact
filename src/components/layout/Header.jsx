@@ -3,7 +3,7 @@ import LanguageSelector from "./LanguageSelector";
 import NavItems from "./NavItems";
 import SearchInput from "./SearchInput";
 
-function Header() {
+function Header(props) {
   return (
     <div>
       <nav className="fixed w-full container mx-auto p-6 bg-transparent z-40">
@@ -13,7 +13,7 @@ function Header() {
               Tour.
             </p>
           </div>
-          <NavItems />
+          <NavItems currentPage={props.currentPage}/>
           <SearchInput />
           <LanguageSelector/>
         </div>

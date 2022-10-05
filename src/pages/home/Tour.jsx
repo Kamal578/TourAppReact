@@ -19,13 +19,21 @@ function Tour(props) {
           <AiOutlineCalendar style={yellowStyle} />
           {props.date}
         </p>
-        <p className="text-2xl text-left font-primary font-normal text-black flex flex-row gap-2">
+        <p className="text-2xl text-left font-primary font-normal text-black flex flex-row gap-2 justify-between">
+          <span className="flex flex-row gap-2">
           <AiOutlineClockCircle style={yellowStyle} />
           {props.time}
-        <span style={yellowStyle} className="font-medium">{props.price}$</span>
+          </span>
+          <span style={yellowStyle} className="font-medium">
+            {props.price}$
+          </span>
         </p>
-        <NavLink exact to="/" className="bg-darkerGreen font-primary text-white px-5 py-4 border-transparent rounded-lg text-2xl flex items-center justify-center">
-            View Details
+        <NavLink
+          exact
+          to="/"
+          className="bg-darkerGreen font-primary text-white px-5 py-4 border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-white hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
+        >
+          View Details
         </NavLink>
       </div>
     </div>
