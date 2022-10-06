@@ -43,11 +43,13 @@ module.exports = {
         'green':'#2EEF59',
         'green-border':'#2AEE55',
         'darkerGreen':'#075B19',
-        'khaki':'#808000C9'
+        'khaki':'#808000C9',
+        'greyish':'#555555'
       },
       backgroundImage: {
         'hero-bg': "url('/src/assets/img/home-hero-bg.png')",
-        'tour': "url('/src/assets/img/tour1.jpg')"
+        'tour': "url('/src/assets/img/tour1.jpg')",
+        'howItWorks': "url('/src/assets/img/howitworks.png')"
       },
       fontFamily:{
         'primary': ['Montserrat', 'system-ui', 'sans-serif'],
