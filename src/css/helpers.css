@@ -107,3 +107,12 @@
   color: #ffffff;
   cursor: pointer;
 }
+/* Gallery Component style */
+.imgRightArrow{
+  position: relative;
+  color: white !important;
+}
+.imgLeftArrow{
+  position: relative;
+  color: white !important;
+}

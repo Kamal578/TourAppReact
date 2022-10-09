@@ -4,6 +4,7 @@ import UpcomingTours from "./UpcomingTours";
 import Gallery from "./Gallery";
 import Header from "../../components/layout/Header";
 import HowItWorks from "./HowItWorks";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <UpcomingTours/>
       <Gallery/>
       <HowItWorks/>
+      <Contact />
     </div>
   );
 }
