@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import UpcomingTours from "./UpcomingTours";
 import Gallery from "./Gallery";
 import Header from "../../components/layout/Header";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <UpcomingTours/>
       <Gallery/>
+      <Contact />
     </div>
   );
 }
