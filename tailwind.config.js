@@ -42,6 +42,7 @@ module.exports = {
         "green-border": "#2AEE55",
         darkerGreen: "#075B19",
         khaki: "#808000C9",
+        khakiDark: "#808000",
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",

@@ -10,40 +10,45 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-function GalleryComponent() {
-  let Data = [
-    { id: 1, imgSrc: img1 },
-    { id: 2, imgSrc: img2 },
-    { id: 3, imgSrc: img3 },
-    { id: 4, imgSrc: img4 },
-    { id: 5, imgSrc: img5 },
-    { id: 6, imgSrc: img6 },
-  ];
-  const [data, setData] = useState({ img: "", i: 0 });
-  const [model, setModel] = useState(false);
-  const [tempImgSrc, setTempImg] = useState("");
 
-  const getImg = (imgSrc) => {
-    setTempImg(imgSrc);
-    setModel(true);
+let Data = [
+  { id: 1, imgSrc: img1 },
+  { id: 2, imgSrc: img2 },
+  { id: 3, imgSrc: img3 },
+  { id: 4, imgSrc: img4 },
+  { id: 5, imgSrc: img5 },
+  { id: 6, imgSrc: img6 },
+];
+
+function GalleryComponent() {
+  const [showingId, setShowingId] = useState(0);
+  const [modal, setModal] = useState(false);
+
+  const getImg = (id) => {
+    setModal(true);
+    setShowingId(id);
   };
-  const imgAction = (action) => {
-    let i = data.i;
-    if (action === "next-img") {
-      setData({ img: Data[i + 1], i: i + 1 });
-    }
-    if (action === "previous-img") {
-      setData({ img: Data[i - 1], i: i - 1 });
+
+  const imgAction = (isNext) => {
+    if (isNext) {
+      if (showingId !== Data.length) {
+        setShowingId((pre) => pre + 1);
+      } else {
+        setShowingId(1);
+      }
+    } else {
+      if (showingId !== 1) {
+        setShowingId((pre) => pre - 1);
+      } else {
+        setShowingId(Data.length);
+      }
     }
   };
 
   return (
     <>
-      <div className={model ? "model open" : "model"}>
-        <button
-          className="imgLeftArrow"
-          onClick={() => imgAction("previous-img")}
-        >
+      <div className={modal ? "model open" : "model"}>
+        <button className="imgLeftArrow" onClick={() => imgAction(false)}>
           <MdArrowBackIos
             className="icon"
             style={{
@@ -53,8 +58,15 @@ function GalleryComponent() {
             }}
           />
         </button>
-        <img src={tempImgSrc} alt="tempImg" />
-        <button className="imgRightArrow" onClick={() => imgAction("next-img")}>
+        <img
+          src={
+            showingId !== 0
+              ? Data.find(({ id }) => id === showingId).imgSrc
+              : ""
+          }
+          alt="tempImg"
+        />
+        <button className="imgRightArrow" onClick={() => imgAction(true)}>
           <MdArrowForwardIos
             className="icon"
             style={{
@@ -67,18 +79,15 @@ function GalleryComponent() {
 
         <AiOutlineClose
           onClick={() => {
-            setModel(false);
+            setModal(false);
+            setShowingId(0);
           }}
         />
       </div>
       <div className="flex flex-wrap items-center justify-center cursor-pointer">
-        {Data.map((item, index) => {
+        {Data.map((item) => {
           return (
-            <div
-              className="pics"
-              key={index}
-              onClick={() => getImg(item.imgSrc)}
-            >
+            <div className="pics" key={item.id} onClick={() => getImg(item.id)}>
               <img
                 src={item.imgSrc}
                 style={{ height: "20rem", width: "25rem" }}

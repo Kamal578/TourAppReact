@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="flex items-center justify-center w-full h-[49.5rem] bg-gazangul-lake  bg-no-repeat  bg-cover	">
-      <div className="text-center bg-khaki w-[62.1rem] h-[42.8rem] rounded-bl-[5.3rem] rounded-tr-[5.3rem]">
+      <div className="text-center bg-khakiDark  w-[62.1rem] h-[42.8rem] rounded-bl-[5.3rem] rounded-tr-[5.3rem]">
         <div>
           <h3 className="p-3 text-5xl font-bold text-darkerGreen pt-14">
             Contact Us
@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
             <div className="mb-3">
               <textarea
-                className="w-full px-3 py-5 mb-3 bg-transparent border  border-darkerGreen rounded-xl placeholder:text-white placeholder:text-xl h-36 placeholder:pl-5"
+                className="w-full px-3 py-5 mb-3 bg-transparent border resize-none border-darkerGreen rounded-xl placeholder:text-white placeholder:text-xl h-36 placeholder:pl-5"
                 name="message"
                 id="message"
                 cols="30"
