@@ -5,16 +5,20 @@ import Gallery from "./Gallery";
 import Header from "../../components/layout/Header";
 import HowItWorks from "./HowItWorks";
 import Contact from "./Contact";
+import AboutUs from "./AboutUs";
+import Footer from "../../components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="Home">
-      <Header currentPage={1}/>
+    <>
+      <Header currentPage={1} />
       <Hero />
-      <UpcomingTours/>
-      <Gallery/>
-      <HowItWorks/>
+      <UpcomingTours />
+      <Gallery />
+      <HowItWorks />
+      <AboutUs />
       <Contact />
-    </div>
+      <Footer />
+    </>
   );
 }

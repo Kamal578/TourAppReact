@@ -55,7 +55,7 @@ export default function UpcomingTours() {
       <p className="text-center text-7xl text-darkerGreen font-primary font-bold mb-10">
         Upcoming Tours
       </p>
-      <div className="flex flex-row gap-x-3 md:flex-row">
+      <div className="flex flex-col gap-x-3 items-center justify-center md:flex-row">
         {/* <Tour
           title="Baku City Tour"
           date="01-08.10.2022"
