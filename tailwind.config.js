@@ -34,7 +34,6 @@ module.exports = {
 
       "max-sm": { max: "639px" },
       // => @media (max-width: 639px) { ... }
-      "max-nav": { max: "1180px" },
     },
     extend: {
       colors: {
@@ -43,7 +42,8 @@ module.exports = {
         'darkerGreen':'#075B19',
         'khaki':'#808000C9',
         'greyish':'#555555',
-        'khakiDark': "#808000",
+        'khakiDark': "#9b9b36",
+        'navbar-active': "#637ca4"
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",

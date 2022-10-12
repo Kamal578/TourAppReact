@@ -24,7 +24,7 @@
 .input-search::placeholder {
   color: white;
   font-size: 1em;
-  font-weight: 100;
+  font-weight: 400;
 }
 .btn-search {
   display: flex;
@@ -38,6 +38,7 @@
   outline: none;
   cursor: pointer;
   border-radius: 50%;
+  border-color: #666666;
   position: absolute;
   right: 0px;
   color: #ffffff;
@@ -121,4 +122,15 @@ select {
 }
 option {
   background-color: transparent !important;
+}
+
+.navbar{
+  background-color: transparent;
+  transition: 0.5s all;
+}
+
+.navbar.active{
+  background-color: rgba(99, 124, 164, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+
 }

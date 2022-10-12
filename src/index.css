@@ -8,4 +8,7 @@
     .header-link {
         @apply text-white font-primary border-b-2 border-transparent hover:border-b-2 hover:border-green transition-all duration-300;
     }
+    .navbar{
+        @apply fixed w-full  p-6 z-40;
+    }
 }

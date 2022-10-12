@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function NavItems(props) {
-
   return (
     <div className="hidden space-x-6 md:flex">
       <NavLink
         exact
         to={"/"}
         className={`header-link ${props.currentPage === 1 && "border-green"}`}
+        style = {{color: props.color}}
       >
         Home
       </NavLink>
@@ -16,6 +16,7 @@ export default function NavItems(props) {
         exact
         to={"/tours"}
         className={`header-link ${props.currentPage === 2 && "border-green"}`}
+        style = {{color: props.color}}
       >
         Tours
       </NavLink>
@@ -23,6 +24,7 @@ export default function NavItems(props) {
         exact
         to={"/gallery"}
         className={`header-link ${props.currentPage === 3 && "border-green"}`}
+        style = {{color: props.color}}
       >
         Gallery
       </NavLink>
@@ -30,6 +32,7 @@ export default function NavItems(props) {
         exact
         to={"/whyUs"}
         className={`header-link ${props.currentPage === 4 && "border-green"}`}
+        style = {{color: props.color}}
       >
         Why us
       </NavLink>
@@ -37,6 +40,7 @@ export default function NavItems(props) {
         exact
         to={"/contact"}
         className={`header-link ${props.currentPage === 5 && "border-green"}`}
+        style = {{color: props.color}}
       >
         Contact
       </NavLink>
