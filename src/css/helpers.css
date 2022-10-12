@@ -115,6 +115,7 @@
 .imgLeftArrow {
   position: relative;
   color: white !important;
+<<<<<<< HEAD
 }
 select {
   background-color: transparent !important;
@@ -134,3 +135,6 @@ option {
   /* background-color: rgba(255, 255, 255, 0.8); */
 
 }
+=======
+} 
+>>>>>>> 13a7b684fd382bf8eb88796a4732b969e67f4b33

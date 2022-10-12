@@ -43,7 +43,8 @@ module.exports = {
         'khaki':'#808000C9',
         'greyish':'#555555',
         'khakiDark': "#9b9b36",
-        'navbar-active': "#637ca4"
+        'navbar-active': "#637ca4",
+        'black-rgba': 'rgba(0, 0, 0, 0.6)'
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",

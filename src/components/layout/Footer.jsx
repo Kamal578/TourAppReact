@@ -6,22 +6,22 @@ import { ReactComponent as YouTube } from "../../assets/icons/YouTube.svg";
 import { ReactComponent as Linkedin } from "../../assets/icons/Linkedin.svg";
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   const Contact = {
     number: "+994506248822",
     email: "info@tour.com",
   };
   return (
-    <div className="sticky flex flex-col bg-darkerGreen">
+    <div className="sticky flex flex-col px-24 bg-darkerGreen">
       <div
         id="container1"
-        className="flex flex-col gap-2 items-start justify-between text-base text-thin text-white p-10 md:flex-row md:gap-0"
+        className="flex flex-col items-start justify-between gap-2 p-10 text-base text-white text-thin md:flex-row md:gap-0"
       >
         <div
           id="col1"
-          className="w-full flex justify-between flex-col gap-4 md:w-1/4"
+          className="flex flex-col justify-between w-full gap-4 md:w-1/4"
         >
-          <p className="text-green text-4xl font-logo font-bold select-none">
+          <p className="text-4xl font-bold select-none mb-11 text-green font-logo">
             Tour.
           </p>
           <p className="text-base">
@@ -31,29 +31,46 @@ function Footer() {
             company in this region. All of our placements are suitable.
           </p>
         </div>
-        <div id="col2" className=" ">
-          <p className="font-semibold">Quick Links</p>
+        <div id="col2">
+          <p className="mb-3 text-xl font-semibold">Quick Links</p>
           <div className="flex flex-col">
-            <Link to="/">About</Link>
-            <Link to="/">Tours</Link>
-            <Link to="/">Gallery</Link>
-            <Link to="/">How it works</Link>
+            <Link to="/" className="mt-4 text-sm">
+              About
+            </Link>
+            <Link to="/" className="mt-4 text-sm">
+              Tours
+            </Link>
+            <Link to="/" className="mt-4 text-sm">
+              Gallery
+            </Link>
+            <Link to="/" className="mt-4 text-sm">
+              How it works
+            </Link>
           </div>
         </div>
         <div id="col3" className="flex flex-col">
-          <p className="font-semibold">Contact us</p>
+          <p className="mb-3 text-xl font-semibold">Contact us</p>
           <div className="flex flex-col">
-            <a href="https://goo.gl/maps/XsBXEinxeUDXCT9q9">
+            <a
+              className="mt-4 text-sm"
+              href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
+            >
               5 A.Azizbeyov, Baku, AZerbaijan AZ1077
             </a>
-            <a href={"tel:" + Contact["number"]}>{Contact["number"]}</a>
-            <a href={"mailto:" + Contact["email"]} to="/">
+            <a className="mt-4 text-sm" href={"tel:" + Contact["number"]}>
+              {Contact["number"]}{" "}
+            </a>
+            <a
+              className="mt-4 text-sm"
+              href={"mailto:" + Contact["email"]}
+              to="/"
+            >
               {Contact["email"]}
             </a>
           </div>
         </div>
         <div id="col4" className="flex flex-col gap-12">
-          <p className="font-semibold">Social Media</p>
+          <p className="text-xl font-semibold">Social Media</p>
           <div className="flex flex-row gap-12">
             <Facebook />
             <Instagram />
@@ -64,17 +81,17 @@ function Footer() {
       </div>
       <div
         id="container2"
-        className="flex flex-col items-center justify-between p-5 text-xl text-thin text-white md:flex-row"
+        className="flex flex-col items-center justify-between p-5 text-xl text-white mb-7 text-thin md:flex-row"
       >
         <p className="text-xl text-thin">
           Copyright © 2022 Tour LLC All Rights Reserved
         </p>
-        <p className="flex flex-row justify-center items-center">
+        <p className="flex flex-row items-center justify-center">
           Site created by: <JavaChipLogo style={{ width: "8em" }} />
         </p>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
