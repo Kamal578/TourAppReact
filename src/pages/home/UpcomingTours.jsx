@@ -1,5 +1,5 @@
 import React from "react";
-import Tour from "./Tour";
+import Tour from "../../components/common/Tour"; 
 import Guba from "../../assets/img/Guba.jpg";
 import Gusar from "../../assets/img/Gusar.jpg";
 import Baku from "../../assets/img/tour1.jpg";
