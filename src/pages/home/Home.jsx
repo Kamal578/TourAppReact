@@ -11,7 +11,7 @@ import Footer from "../../components/layout/Footer";
 export default function Home() {
   return (
     <>
-      <Header currentPage={1} />
+      <Header currentPage={1} color="white" />
       <Hero />
       <UpcomingTours />
       <Gallery />

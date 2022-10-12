@@ -1,17 +1,17 @@
 import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-export default function LanguageSelector() {
+export default function LanguageSelector({color}) {
   return (
     <div className="">
-      <select className="flex items-center pr-1 text-xl text-white bg-transparent border-white size-4">
-        <option value="eng" className="text-black bg-transparent">
+      <select className={`text-${color} flex items-center pr-1 text-xl bg-transparen text- size-4`}>
+        <option value="eng">
           Eng
         </option>
-        <option value="aze" className="text-black bg-transparent">
+        <option value="aze">
           Aze
         </option>
-        <option value="rus" className="text-black bg-transparent">
+        <option value="rus">
           Rus
         </option>
       </select>

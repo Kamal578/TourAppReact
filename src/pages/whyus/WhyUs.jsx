@@ -8,7 +8,7 @@ import Responsibility from "./Responsibility";
 export default function WhyUs() {
   return (
     <div>
-      <Header currentPage={4} color="#666666" /> <br/>
+      <Header currentPage={4} color="black" /> <br />
       <WhoWeAre />
       <AgencyInfo />
       <Responsibility />
