@@ -44,6 +44,7 @@ module.exports = {
         'khaki':'#808000C9',
         'greyish':'#555555',
         'khakiDark': "#808000",
+        'black-rgba': 'rgba(0, 0, 0, 0.6)'
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",

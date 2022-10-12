@@ -51,11 +51,11 @@ export default function UpcomingTours() {
     );
   }
   return (
-    <div className="flex flex-col items-center justify-center bg-white h-100 my-10">
-      <p className="text-center text-7xl text-darkerGreen font-primary font-bold mb-10">
+    <div className="flex flex-col items-center justify-center my-10 bg-white h-100">
+      <p className="mb-10 font-bold text-center text-7xl text-darkerGreen font-primary">
         Upcoming Tours
       </p>
-      <div className="flex flex-col gap-x-3 items-center justify-center md:flex-row">
+      <div className="flex flex-col items-center justify-center gap-x-3 md:flex-row">
         {/* <Tour
           title="Baku City Tour"
           date="01-08.10.2022"
@@ -86,7 +86,7 @@ export default function UpcomingTours() {
         /> */}
         {Tours}
       </div>
-      <div className="pt-10 text-darkerGreen font-primary font-semibold text-2xl border-2 border-transparent hover:border-b-darkerGreen transition-all duration-200">
+      <div className="pt-10 text-2xl font-semibold transition-all duration-200 border-2 border-transparent text-darkerGreen font-primary hover:border-b-darkerGreen">
         <NavLink exact to="/tours">View more</NavLink>
       </div>
     </div>
