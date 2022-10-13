@@ -44,13 +44,16 @@ module.exports = {
         'greyish':'#555555',
         'khakiDark': "#9b9b36",
         'navbar-active': "#637ca4",
-        'black-rgba': 'rgba(0, 0, 0, 0.6)'
+        'black-rgba': 'rgba(0, 0, 0, 0.6)',
+        'akaroa': '#d3d3a6'
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",
         "tour": "url('/src/assets/img/tour1.jpg')",
         "gazangul-lake": "url('/src/assets/img/Gazangul_Lake.png')",
-        'howItWorks': "url('/src/assets/img/howitworks.png')"
+        'howItWorks': "url('/src/assets/img/howitworks.png')",
+        'videoBg': "url('/src/assets/img/video-bg.png')",
+        "innerPageBg": "url('/src/assets/img/innerPageBg.png')"
       },
       fontFamily: {
         primary: ["Montserrat", "system-ui", "sans-serif"],

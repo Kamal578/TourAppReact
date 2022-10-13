@@ -31,7 +31,7 @@ function Tour(props) {
         <NavLink
           exact
           to="/"
-          className="bg-darkerGreen font-primary text-white px-5 py-4 border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-white hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
+          className="bg-darkerGreen font-primary text-white px-5 py-4 border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-transparent hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
         >
           View Details
         </NavLink>

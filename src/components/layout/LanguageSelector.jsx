@@ -1,5 +1,4 @@
 import React from "react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function LanguageSelector() {
   return (

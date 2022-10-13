@@ -7,7 +7,6 @@ import img4 from "../../assets/img/gallery/gallery4.png";
 import img5 from "../../assets/img/gallery/gallery5.png";
 import img6 from "../../assets/img/gallery/gallery6.png";
 import { AiOutlineClose } from "react-icons/ai";
-import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 

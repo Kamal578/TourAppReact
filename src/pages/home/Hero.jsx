@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -13,13 +14,13 @@ export default function Hero() {
           information for all of them
         </p>
       </div>
-      <a
-        href="#"
+      <NavLink
+        exact to="/tours"
         className="text-3xl mt-7 font-primary font-normal border-2 border-white rounded-full py-3 px-5 hover:border-white hover:text-green hover:bg-white transition-all duration-200"
       >
         {" "}
         Explore
-      </a>
+      </NavLink>
     </div>
   );
 }
