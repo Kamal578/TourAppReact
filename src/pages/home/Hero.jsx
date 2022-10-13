@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import HeroBg from "../../assets/img/home-hero-bg.png";
+import GazangulLake from "../../assets/img/Gazangul_Lake.png";
+import Lankaran from "../../assets/img/lankaran3.png";
+
+const images = [
+  HeroBg,
+  GazangulLake,
+  Lankaran
+
+];
 
 export default function Hero() {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((v) => {
+        return v === 2 ? 0 : v + 1;
+      });
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="h-screen bg-hero-bg bg-cover bg-center flex flex-col items-center justify-center text-white z-0">
+    <div
+      className="h-screen  bg-cover bg-center flex flex-col items-center justify-center text-white z-0"
+      style={{ backgroundImage: `url(${images[value]})`, transition: "500ms"}}
+    >
       <div className="w-2/3 flex flex-col justify-center items-center">
         <p className="text-7xl font-primary font-bold mb-5">
           Discover incredible <span className="text-green">places in</span>{" "}
@@ -15,7 +38,8 @@ export default function Hero() {
         </p>
       </div>
       <NavLink
-        exact to="/tours"
+        exact
+        to="/tours"
         className="text-3xl mt-7 font-primary font-normal border-2 border-white rounded-full py-3 px-5 hover:border-white hover:text-green hover:bg-white transition-all duration-200"
       >
         {" "}

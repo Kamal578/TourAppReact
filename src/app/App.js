@@ -6,6 +6,7 @@ import WhyUs from "../pages/whyus/WhyUs";
 import GalleryPage from "../pages/gallery/GalleryPage";
 import Contact from "../pages/contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
+import TourInnerPage from "../pages/tourInnerPage/TourInnerPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/whyus" exact element={<WhyUs />} />
           <Route path="/gallery" exact element={<GalleryPage />} />
           <Route path="/contact" exact element={<Contact />} />
+          <Route path="/tourInnerPage" exact element={<TourInnerPage />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>

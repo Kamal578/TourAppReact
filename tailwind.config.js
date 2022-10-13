@@ -45,7 +45,8 @@ module.exports = {
         'khakiDark': "#9b9b36",
         'navbar-active': "#637ca4",
         'black-rgba': 'rgba(0, 0, 0, 0.6)',
-        'akaroa': '#d3d3a6'
+        'akaroa': '#d3d3a6',
+        'pineglade': '#c8c786'
       },
       backgroundImage: {
         "hero-bg": "url('/src/assets/img/home-hero-bg.png')",
