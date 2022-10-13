@@ -3,7 +3,7 @@ import LanguageSelector from "./LanguageSelector";
 import NavItems from "./NavItems";
 import SearchInput from "./SearchInput";
 
-function Header(props) {
+function Header({color,currentPage}) {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     console.log(window.scrollY);
@@ -27,9 +27,9 @@ function Header(props) {
               Tour.
             </p>
           </div>
-          <NavItems currentPage={props.currentPage} color={props.color}/>
-          <SearchInput color={props.color}/>
-          <LanguageSelector />
+          <NavItems currentPage={currentPage} color={color}/>
+          <SearchInput color={color}/>
+          <LanguageSelector color={color} />
         </div>
       </nav>
     </div>
