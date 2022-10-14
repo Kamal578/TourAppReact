@@ -36,6 +36,12 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
+      gridTemplateColumns: {
+        'innerHero': 'repeat(2, 1fr)',
+      },
+      gridTemplateRows: {
+        'innerHero': 'repeat(2, 1fr)',
+      },
       colors: {
         'green':'#2EEF59',
         'green-border':'#2AEE55',

@@ -4,7 +4,7 @@ import { ReactComponent as Facebook } from "../../assets/icons/Facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/Instagram.svg";
 import { ReactComponent as YouTube } from "../../assets/icons/YouTube.svg";
 import { ReactComponent as Linkedin } from "../../assets/icons/Linkedin.svg";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Footer = () => {
   const Contact = {
@@ -21,9 +21,13 @@ const Footer = () => {
           id="col1"
           className="flex flex-col justify-between w-full gap-4 md:w-1/4"
         >
-          <p className="text-4xl font-bold select-none mb-11 text-green font-logo">
+          <NavLink
+            exact
+            to="/"
+            className="text-4xl font-bold select-none mb-11 text-green font-logo"
+          >
             Tour.
-          </p>
+          </NavLink>
           <p className="text-base">
             We are a trusted travel company in Azerbaijan. Our main goal is to
             provide confortable tours for our clients. We have professional
@@ -72,10 +76,10 @@ const Footer = () => {
         <div id="col4" className="flex flex-col gap-12">
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex flex-row gap-12">
-            <Facebook />
-            <Instagram />
-            <YouTube />
-            <Linkedin />
+            <Facebook className="cursor-pointer" />
+            <Instagram className="cursor-pointer" />
+            <YouTube className="cursor-pointer" />
+            <Linkedin className="cursor-pointer" />
           </div>
         </div>
       </div>
