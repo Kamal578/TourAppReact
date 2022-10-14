@@ -4,20 +4,24 @@ import AboutPic2 from "../.././assets/img/lankaran3.png";
 const WhoWeAre = () => {
   return (
     <div className="mt-20">
-      <h3 className="font-bold text-center 2xl:text-6xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-4xl text-darkerGreen">
-        About
-      </h3>
-      <div className="flex mt-10 2xl:mx-32 xl:mx-32 lg:mx-32 md:mx-16 sm:mx-0 xl:gap-10 lg:gap-10 md:gap-10">
-        <img
-          src={AboutPic}
-          alt=""
-          className="2xl:w-[29.1rem] 2xl:h-[43.6rem] xl:w-[24rem] xl:h-[38rem] lg:w-[20rem] lg:h-[34rem] md:w-[20rem] md:h-[34rem] sm:w-[18rem] sm:h-[30rem]"
-        />
-        <div className="">
-          <h4 className="mb-6 font-bold text-center xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-darkerGreen">
+      <div className="my-12">
+        <h3 className="font-bold text-center text-darkerGreen 2xl:text-6xl md:text-5xl sm:text-4xl lg:text-5xl xl:text-5xl max-sm:text-3xl">
+          About
+        </h3>
+      </div>
+      <div className="flex space-y-8 2xl:justify-evenly lg:justify-center xl:justify-center xl:flex-row 2xl:flex-row 2xl:gap-32 xl:gap-16 lg:gap-10 md:mx-auto lg:text-start md:text-center md:flex-col sm:text-center 2xl:text-start xl:test-start sm:flex-col lg:flex-row max-sm:flex-col max-sm:text-center">
+        <div className="md:mx-auto sm:mx-auto max-sm:mx-auto lg:ml-5">
+          <img
+            src={AboutPic}
+            alt=""
+            className="max-w-lg 2xl:w-[466px] xl:w-[400px] lg:w-[400px] md:w-[400px] 2xl:h-[699px] xl:h-[600px] lg:h-[550px] md:h-[550px] max-sm:h-[520px] max-sm:w-[350px]"
+          />
+        </div>
+        <div className="md:mx-auto sm:mx-auto">
+          <h4 className="font-bold text-center text-darkerGreen 2xl:text-6xl md:text-5xl sm:text-4xl lg:text-5xl xl:text-5xl max-sm:text-3xl 2xl:mb-12 lg:mb-12 md:mb-7 sm:mb-5 max-sm:mb-4">
             Who we are?
           </h4>
-          <p className="xl:leading-10 xl:text-2xl text-black-rgba lg:text-xl md:text-xl lg:leading-tight md:leading-tight sm:leading-tight">
+          <p className="max-w-2xl text-black-rgba 2xl:text-3xl xl:text-3xl lg:text-xl md:text-2xl sm:text-2xl max-sm:text-xl">
             We are ready to help you to spend an amazing vacation day in our
             country’s various places. Our company is a trusted professional
             company based in Azerbaijan. You will be provided with deatiled
@@ -29,21 +33,24 @@ const WhoWeAre = () => {
           </p>
         </div>
       </div>
-      <div className="flex 2xl:px-32 xl:px-30 lg:mx-25 md:px-20 sm:px-20 pb-9 2xl:gap-36">
-        <div className="">
-          <h4 className="max-w-md mt-16 mb-5 font-bold leading-10 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl 2xl:mr-15 text-darkerGreen lg:leading-normal md:leading-tight sm:leading-tight">
+
+      <div className="flex justify-evenly xl:flex-row 2xl:flex-row md:flex-col lg:flex-col sm:flex-col max-sm:fle-col md:text-center lg:text-center sm:text-center max-sm:text-center 2xl:text-start xl:text-start max-sm:flex-col">
+        <div className="max-w-md mt-10 md:mx-auto sm:mx-auto max-sm:mx-auto">
+          <h4 className="mb-6 font-bold 2xl:text-3xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl max-sm:text-xl text-darkerGreen">
             We guide you to see wonderful views both in cities and countryside.{" "}
           </h4>
-          <p className="pr-16 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-xl sm:text-xl 2xl:leading-10 xl:leading-7 lg:leading-normal md:leading-tight sm:leading-tight text-black-rgba">
+          <p className="text-black-rgba 2xl:text-3xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl max-sm:text-xl">
             Tours in Azerbaijan will impress you with its places and traditions.
             Our company plays an important role to help.
           </p>
         </div>
-        <img
-          src={AboutPic2}
-          alt={AboutPic2}
-          className="2xl:-mt-7 xl:mb-7 2xl:w-[36.2rem] xl:w-[33rem] lg:w-[29rem] md:w-[27rem] sm:w-[27rem] 2xl:h-[22.7rem] xl:h-[20.7rem] lg:h-[18.7rem] md:h-[15rem] sm:h-[13rem]"
-        />
+        <div className="md:mx-auto sm:mx-auto max-sm:mx-auto md:mt-7 sm:mt-5 max-sm:mt-5">
+          <img
+            src={AboutPic2}
+            alt={AboutPic2}
+            className="2xl:w-[580px] 2xl:h-[364px]"
+          />
+        </div>
       </div>
     </div>
   );

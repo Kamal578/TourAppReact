@@ -6,7 +6,7 @@ const Responsibility = () => {
   return (
     <div>
       <div>
-        <p className="mt-16 text-xl leading-8 px-36 text-black-rgba">
+        <p className="mt-16 text-xl leading-8 2xl:px-36 xl:px-32 lg:px-24 md:px-20 sm:px-10 max-sm:px-5 2xl:text-start xl:text-start md:text-center text-black-rgba max-sm:text-lg sm:text-center max-sm:text-center">
           <span className="text-darkerGreen">Tour</span> travel agency is a
           private retailer or public service that provides travel and
           tourism-related services to the general public on behalf of
@@ -18,13 +18,26 @@ const Responsibility = () => {
           an array of choices relying on the spending plan.
         </p>
       </div>
-      <div className="flex items-center gap-12 py-20 mx-36">
+
+      <div className="flex items-center py-20 justify-evenly xl:flex-row max-sm:flex-col sm:flex-col md:flex:col lg:flex-col">
         <div className="flex">
-          <img className="w-[235px] h-[381px]" src={Resposibility1} alt={Resposibility1} />
-          <img className="w-[235px] h-[381px] -ml-20 mt-20" src={Resposibility2} alt={Resposibility2} />
-          <img className="w-[235px] h-[381px] -ml-20 mt-40" src={Resposibility3} alt={Resposibility3} />
+          <img
+            className="w-[235px] h-[381px]"
+            src={Resposibility1}
+            alt={Resposibility1}
+          />
+          <img
+            className="w-[235px] h-[381px] -ml-20 mt-20"
+            src={Resposibility2}
+            alt={Resposibility2}
+          />
+          <img
+            className="w-[235px] h-[381px] -ml-20 mt-40"
+            src={Resposibility3}
+            alt={Resposibility3}
+          />
         </div>
-        <div className="">
+        <div className="lg:mt-10 md:mt-10 sm:mt-7 max-sm:mt-7">
           <h4 className="mb-16 text-6xl text-darkerGreen">Responsibilities</h4>
           <ul className="text-3xl list-disc pl-7 text-black-rgba">
             <li className="pb-10 pl-3">Transportation</li>
