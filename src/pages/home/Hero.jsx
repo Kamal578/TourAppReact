@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import HeroBg from "../../assets/img/home-hero-bg.png";
 import GazangulLake from "../../assets/img/Gazangul_Lake.png";
-import Lankaran from "../../assets/img/lankaran3.png";
+import GrandCanyon from "../../assets/img/grandcanyon.jpg";
 
-const images = [
-  HeroBg,
-  GazangulLake,
-  Lankaran
-
-];
+const images = [HeroBg, GazangulLake, GrandCanyon];
 
 export default function Hero() {
   const [value, setValue] = useState(0);
@@ -18,14 +13,14 @@ export default function Hero() {
       setValue((v) => {
         return v === 2 ? 0 : v + 1;
       });
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
       className="h-screen  bg-cover bg-center flex flex-col items-center justify-center text-white z-0"
-      style={{ backgroundImage: `url(${images[value]})`, transition: "500ms"}}
+      style={{ backgroundImage: `url(${images[value]})`, transition: "500ms" }}
     >
       <div className="w-2/3 flex flex-col justify-center items-center">
         <p className="text-7xl font-primary font-bold mb-5">

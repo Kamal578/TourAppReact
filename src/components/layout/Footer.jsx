@@ -4,7 +4,7 @@ import { ReactComponent as Facebook } from "../../assets/icons/Facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/Instagram.svg";
 import { ReactComponent as YouTube } from "../../assets/icons/YouTube.svg";
 import { ReactComponent as Linkedin } from "../../assets/icons/Linkedin.svg";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Footer = () => {
   const Contact = {
@@ -21,10 +21,21 @@ const Footer = () => {
           id="col1"
           className="flex flex-col justify-between w-full gap-4 md:w-1/4"
         >
+<<<<<<< HEAD
           <p className="font-bold select-none 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-wxl sm:text-xl mb-11 text-green font-logo">
             Tour.
           </p>
           <p className="2xl:text-base xl:text-sm lg:text-xs md:text-xs sm:text-xs">
+=======
+          <NavLink
+            exact
+            to="/"
+            className="text-4xl font-bold select-none mb-11 text-green font-logo"
+          >
+            Tour.
+          </NavLink>
+          <p className="text-base">
+>>>>>>> 849352b608aae6701dbcf1de8abf1d96782a793d
             We are a trusted travel company in Azerbaijan. Our main goal is to
             provide confortable tours for our clients. We have professional
             services for you to be accessed. Our company is a highly created
@@ -86,11 +97,19 @@ const Footer = () => {
         </div>
         <div id="col4" className="flex flex-col gap-12">
           <p className="text-xl font-semibold">Social Media</p>
+<<<<<<< HEAD
           <div className="flex justify-center gap-12 2xl:flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-col">
             <Facebook />
             <Instagram />
             <YouTube />
             <Linkedin />
+=======
+          <div className="flex flex-row gap-12">
+            <Facebook className="cursor-pointer" />
+            <Instagram className="cursor-pointer" />
+            <YouTube className="cursor-pointer" />
+            <Linkedin className="cursor-pointer" />
+>>>>>>> 849352b608aae6701dbcf1de8abf1d96782a793d
           </div>
         </div>
       </div>

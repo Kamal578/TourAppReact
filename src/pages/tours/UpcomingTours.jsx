@@ -39,17 +39,18 @@ export default function UpcomingTours() {
   ];
   let Tours = [];
 
-  for (let i = 0; i < TourInfoExample.length; i++) {
+
+  TourInfoExample.forEach((tour)=>{
     Tours.push(
       <Tour
-        title={TourInfoExample[i].title}
-        date={TourInfoExample[i].date}
-        time={TourInfoExample[i].time}
-        thumbnail={TourInfoExample[i].thumbnail}
-        price={TourInfoExample[i].price}
+        title={tour.title}
+        date={tour.date}
+        time={tour.time}
+        thumbnail={tour.thumbnail}
+        price={tour.price}
       />
     );
-  }
+  })
   return (
     <div className="flex flex-col items-center justify-center mt-10 bg-white ">
       <p className="mb-10 font-bold text-center text-7xl text-darkerGreen font-primary">

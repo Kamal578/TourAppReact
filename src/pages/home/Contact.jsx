@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-between">
               <button
-                className="w-full px-4 py-5 text-xl text-white border bg-darkerGreen border-darkerGreen rounded-xl "
+                className="w-full px-4 py-5 text-xl text-white border-2 bg-darkerGreen border-darkerGreen rounded-xl hover:bg-transparent transition-all duration-300"
                 type="submit"
               >
                 Send your message
