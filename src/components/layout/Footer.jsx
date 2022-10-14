@@ -21,10 +21,10 @@ const Footer = () => {
           id="col1"
           className="flex flex-col justify-between w-full gap-4 md:w-1/4"
         >
-          <p className="text-4xl font-bold select-none mb-11 text-green font-logo">
+          <p className="font-bold select-none 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-wxl sm:text-xl mb-11 text-green font-logo">
             Tour.
           </p>
-          <p className="text-base">
+          <p className="2xl:text-base xl:text-sm lg:text-xs md:text-xs sm:text-xs">
             We are a trusted travel company in Azerbaijan. Our main goal is to
             provide confortable tours for our clients. We have professional
             services for you to be accessed. Our company is a highly created
@@ -34,16 +34,28 @@ const Footer = () => {
         <div id="col2">
           <p className="mb-3 text-xl font-semibold">Quick Links</p>
           <div className="flex flex-col">
-            <Link to="/" className="mt-4 text-sm">
+            <Link
+              to="/"
+              className="mt-4 2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xs"
+            >
               About
             </Link>
-            <Link to="/" className="mt-4 text-sm">
+            <Link
+              to="/"
+              className="mt-4 2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xs "
+            >
               Tours
             </Link>
-            <Link to="/" className="mt-4 text-sm">
+            <Link
+              to="/"
+              className="mt-4 2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xs "
+            >
               Gallery
             </Link>
-            <Link to="/" className="mt-4 text-sm">
+            <Link
+              to="/"
+              className="mt-4 2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xs "
+            >
               How it works
             </Link>
           </div>
@@ -52,16 +64,19 @@ const Footer = () => {
           <p className="mb-3 text-xl font-semibold">Contact us</p>
           <div className="flex flex-col">
             <a
-              className="mt-4 text-sm"
+              className="mt-4 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:text-xs"
               href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
             >
               5 A.Azizbeyov, Baku, AZerbaijan AZ1077
             </a>
-            <a className="mt-4 text-sm" href={"tel:" + Contact["number"]}>
+            <a
+              className="mt-4 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:text-xs"
+              href={"tel:" + Contact["number"]}
+            >
               {Contact["number"]}{" "}
             </a>
             <a
-              className="mt-4 text-sm"
+              className="mt-4 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:text-xs"
               href={"mailto:" + Contact["email"]}
               to="/"
             >
@@ -71,7 +86,7 @@ const Footer = () => {
         </div>
         <div id="col4" className="flex flex-col gap-12">
           <p className="text-xl font-semibold">Social Media</p>
-          <div className="flex flex-row gap-12">
+          <div className="flex justify-center gap-12 2xl:flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-col">
             <Facebook />
             <Instagram />
             <YouTube />
