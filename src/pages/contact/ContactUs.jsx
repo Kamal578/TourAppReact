@@ -2,22 +2,22 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="flex p-20">
-      <div className="flex items-center justify-center w-full h-[49.5rem] font-primary">
-        <div className="text-center bg-khakiDark  w-[62.1rem] h-[42.8rem] rounded-bl-[5.3rem] rounded-tr-[5.3rem]">
+    <div className="flex items-center pt-20 2xl:flex-row md:flex-col xl:flex-row lg:flex-col sm:flex-col max-sm:flex-col max-sm:mx-12 sm:mx-16 md:mx-20">
+      <div className="select-none	flex items-center justify-center h-[49.5rem] font-primary">
+        <div className="text-center bg-khakiDark  h-[720px] rounded-bl-[5.3rem]">
           <div>
-            <h3 className="p-3 text-5xl font-bold text-darkerGreen pt-14">
+            <h3 className="p-3 font-bold 2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl max-sm:text-3xl text-darkerGreen pt-14">
               Contact Us
             </h3>
-            <p className="p-6 text-xl font-semibold text-white">
+            <p className="p-6 font-semibold text-white 2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base max-sm:text-base">
               Feel free to contact us. We will back to you as soon as possible.
             </p>
           </div>
-          <div className="w-[39.5rem] mx-auto">
-            <form className="px-8 pt-6 pb-8 mb-4 text-xl text-white rounded">
+          <div className="max-w-xl md:mx-auto">
+            <form className="px-8 pt-6 pb-8 mb-4 text-xl text-white rounded select-none">
               <div className="mb-4">
                 <input
-                  className="w-full px-3 py-5 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white placeholder:text-xl placeholder:pl-5"
+                  className="w-full px-3 py-5 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white l:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base placeholder:pl-5"
                   id="name"
                   type="text"
                   placeholder="Name"
@@ -25,7 +25,7 @@ const ContactUs = () => {
               </div>
               <div className="mb-6">
                 <input
-                  className="w-full px-3 py-5 mb-3 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white placeholder:text-xl placeholder:pl-3"
+                  className="w-full px-3 py-5 mb-3 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white l:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base placeholder:pl-3"
                   id="email"
                   type="text"
                   placeholder="Email or phone number"
@@ -33,7 +33,7 @@ const ContactUs = () => {
               </div>
               <div className="mb-3">
                 <textarea
-                  className="w-full px-3 py-5 mb-3 bg-transparent border resize-none border-darkerGreen rounded-xl placeholder:text-white placeholder:text-xl h-36 placeholder:pl-5"
+                  className="w-full px-3 py-5 mb-3 bg-transparent border resize-none border-darkerGreen rounded-xl placeholder:text-white l:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base h-36 placeholder:pl-5"
                   name="message"
                   id="message"
                   cols="30"
@@ -43,7 +43,7 @@ const ContactUs = () => {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="w-full px-4 py-5 text-xl text-white border bg-darkerGreen border-darkerGreen rounded-xl "
+                  className="w-full px-4 py-5 text-white border select-none 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base bg-darkerGreen border-darkerGreen rounded-xl 2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base max-sm:text-base"
                   type="submit"
                 >
                   Send your message
@@ -53,11 +53,11 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      {/* <div class="mapouter">
+      <div class="mapouter flex items-center justify-center rounded-tr-[5.3rem] 2xl:h-[740px] bg-none overflow-hidden	max-w-lg mt-6 max-sm:mx-12 sm:mx-16 md:mx-20">
         <div class="gmap_canvas">
           <iframe
-            width="696"
-            height="515"
+            width="515"
+            height="720"
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=5%20A.Azizbeyov,%20Baku,%20AZerbaijan%20AZ1077&t=&z=13&ie=UTF8&iwloc=&output=embed"
             frameborder="0"
@@ -70,7 +70,7 @@ const ContactUs = () => {
             embed responsive google map
           </a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
