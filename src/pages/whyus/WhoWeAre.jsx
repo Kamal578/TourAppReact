@@ -9,8 +9,8 @@ const WhoWeAre = () => {
           About
         </h3>
       </div>
-      <div className="flex space-y-8 2xl:justify-evenly lg:justify-center xl:justify-center xl:flex-row 2xl:flex-row 2xl:gap-32 xl:gap-16 lg:gap-10 md:mx-auto lg:text-start md:text-center md:flex-col sm:text-center 2xl:text-start xl:test-start sm:flex-col lg:flex-row max-sm:flex-col max-sm:text-center">
-        <div className="md:mx-auto sm:mx-auto max-sm:mx-auto lg:ml-5">
+      <div className="flex space-y-8 2xl:justify-center lg:justify-center xl:justify-center xl:flex-row 2xl:flex-row 2xl:gap-0 xl:gap-16 lg:gap-10 md:mx-auto lg:text-start md:text-center md:flex-col sm:text-center 2xl:text-start xl:test-start sm:flex-col lg:flex-row max-sm:flex-col max-sm:text-center">
+        <div className="md:mx-auto sm:mx-auto max-sm:mx-auto 2xl:ml-90 lg:ml-15">
           <img
             src={AboutPic}
             alt=""

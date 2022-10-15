@@ -12,70 +12,73 @@ const Footer = () => {
     email: "info@tour.com",
   };
   return (
-    <div className="sticky flex flex-col px-24 bg-darkerGreen">
+    <div className="sticky pb-5 pt-7 bg-darkerGreen">
       <div
         id="container1"
-        className="flex flex-col items-start justify-between gap-2 p-10 text-base text-white text-thin md:flex-row md:gap-0"
+        className="flex justify-around text-base text-white max-sm:flex-col max-sm:items-center max-sm:gap-10"
       >
-        <div
-          id="col1"
-          className="flex flex-col justify-between w-full gap-4 md:w-1/4"
-        >
-          <NavLink
-            exact
-            to="/"
-            className="text-4xl font-bold select-none mb-11 text-green font-logo"
-          >
-            Tour.
-          </NavLink>
-          <p className="text-base">
-            We are a trusted travel company in Azerbaijan. Our main goal is to
-            provide confortable tours for our clients. We have professional
-            services for you to be accessed. Our company is a highly created
-            company in this region. All of our placements are suitable.
-          </p>
-        </div>
-        <div id="col2">
-          <p className="mb-3 text-xl font-semibold">Quick Links</p>
-          <div className="flex flex-col">
-            <Link to="/" className="mt-4 text-sm">
-              About
-            </Link>
-            <Link to="/" className="mt-4 text-sm">
-              Tours
-            </Link>
-            <Link to="/" className="mt-4 text-sm">
-              Gallery
-            </Link>
-            <Link to="/" className="mt-4 text-sm">
-              How it works
-            </Link>
-          </div>
-        </div>
-        <div id="col3" className="flex flex-col">
-          <p className="mb-3 text-xl font-semibold">Contact us</p>
-          <div className="flex flex-col">
-            <a
-              className="mt-4 text-sm"
-              href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
-            >
-              5 A.Azizbeyov, Baku, AZerbaijan AZ1077
-            </a>
-            <a className="mt-4 text-sm" href={"tel:" + Contact["number"]}>
-              {Contact["number"]}{" "}
-            </a>
-            <a
-              className="mt-4 text-sm"
-              href={"mailto:" + Contact["email"]}
+        <div className="flex 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-col justify-evenly 2xl:gap-20 lg:gap-16 md:gap-10 sm:gap-10 max-sm:gap-10">
+          <div id="col1" className="">
+            <NavLink
+              exact
               to="/"
+              className="font-bold select-none 2xl:text-4xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-2xl max-sm:text-2xl 2xl:mb-11 text-green font-logo"
             >
-              {Contact["email"]}
-            </a>
+              Tour.
+            </NavLink>
+            <p className="max-w-sm mt-10 2xl:text-base xl:text-base lg:text-sm md:text-sm max-sm:text-base">
+              We are a trusted travel company in Azerbaijan. Our main goal is to
+              provide confortable tours for our clients. We have professional
+              services for you to be accessed. Our company is a highly created
+              company in this region. All of our placements are suitable.
+            </p>
+          </div>
+
+          <div className="flex flex-row 2xl:gap-20 xl:gap-16 lg:gap-10 md:gap-10 sm:gap-7 max-sm:gap-10 text-start ">
+            <div id="col2" className="flex flex-col gap-8">
+              <p className="text-xl font-semibold ">Quick Links</p>
+              <div className="flex flex-col gap-4">
+                <Link to="/" className="text-sm ">
+                  About
+                </Link>
+                <Link to="/" className="text-sm ">
+                  Tours
+                </Link>
+                <Link to="/" className="text-sm ">
+                  Gallery
+                </Link>
+                <Link to="/" className="text-sm ">
+                  How it works
+                </Link>
+              </div>
+            </div>
+            <div id="col3" className="flex flex-col gap-8">
+              <p className="text-xl font-semibold ">Contact us</p>
+              <div className="flex flex-col gap-4">
+                <a
+                  className="text-sm "
+                  href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
+                >
+                  5 A.Azizbeyov, Baku, AZerbaijan AZ1077
+                </a>
+                <a className="text-sm " href={"tel:" + Contact["number"]}>
+                  {Contact["number"]}{" "}
+                </a>
+                <a
+                  className="text-sm "
+                  href={"mailto:" + Contact["email"]}
+                  to="/"
+                >
+                  {Contact["email"]}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="col4" className="flex flex-col gap-12">
+
+        <div id="col4" className="flex flex-col 2xl:gap-16 xl:gap-16 md:gap-10 max-sm:gap-10 sm:gap-10 md:items-center lg:items-center sm:items-center max-sm:items-center 2xl:items-start xl:items-start">
           <p className="text-xl font-semibold">Social Media</p>
-          <div className="flex flex-row gap-12">
+          <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
             <Facebook className="cursor-pointer" />
             <Instagram className="cursor-pointer" />
             <YouTube className="cursor-pointer" />
@@ -85,12 +88,12 @@ const Footer = () => {
       </div>
       <div
         id="container2"
-        className="flex flex-col items-center justify-between p-5 text-xl text-white mb-7 text-thin md:flex-row"
+        className="flex flex-col items-center justify-between px-20 text-white pt-7 text-thin md:flex-row"
       >
-        <p className="text-xl text-thin">
+        <p className="text-base text-thin">
           Copyright © 2022 Tour LLC All Rights Reserved
         </p>
-        <p className="flex flex-row items-center justify-center">
+        <p className="flex flex-row items-center justify-center tex-base">
           Site created by: <JavaChipLogo style={{ width: "8em" }} />
         </p>
       </div>
