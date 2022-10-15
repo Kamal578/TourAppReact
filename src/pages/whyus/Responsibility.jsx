@@ -27,22 +27,22 @@ const Responsibility = () => {
             alt={Resposibility1}
           />
           <img
-            className="w-[235px] h-[381px] -ml-20 mt-20"
+            className="w-[235px] h-[381px] -ml-20 mt-20 max-sm:-ml-32"
             src={Resposibility2}
             alt={Resposibility2}
           />
           <img
-            className="w-[235px] h-[381px] -ml-20 mt-40"
+            className="w-[235px] h-[381px] -ml-20 mt-40 max-sm:-ml-32"
             src={Resposibility3}
             alt={Resposibility3}
           />
         </div>
         <div className="lg:mt-10 md:mt-10 sm:mt-7 max-sm:mt-7">
-          <h4 className="mb-16 text-6xl text-darkerGreen">Responsibilities</h4>
+          <h4 className="mb-16 2xl:text-6xl xl:text-5xl md:text-5xl lg:text-5xl sm:text-4xl max-sm:text-4xl text-darkerGreen">Responsibilities</h4>
           <ul className="text-3xl list-disc pl-7 text-black-rgba">
             <li className="pb-10 pl-3">Transportation</li>
-            <li className="pb-10 pl-3">Meals</li>
-            <li className="pl-3">Acommodation</li>
+            <li className="pb-10 pl-3 ">Meals</li>
+            <li className="pl-3 max-sm:pl-6">Acommodation</li>
           </ul>
         </div>
       </div>

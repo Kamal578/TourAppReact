@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="p-20">
+    <div className="flex p-20">
       <div className="flex items-center justify-center w-full h-[49.5rem] font-primary">
         <div className="text-center bg-khakiDark  w-[62.1rem] h-[42.8rem] rounded-bl-[5.3rem] rounded-tr-[5.3rem]">
           <div>
@@ -53,6 +53,24 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      {/* <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="696"
+            height="515"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=5%20A.Azizbeyov,%20Baku,%20AZerbaijan%20AZ1077&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+          <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
+          <a href="https://www.embedgooglemap.net">
+            embed responsive google map
+          </a>
+        </div>
+      </div> */}
     </div>
   );
 };
