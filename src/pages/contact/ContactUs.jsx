@@ -59,10 +59,10 @@ const ContactUs = () => {
             width="515"
             height="720"
             id="gmap_canvas"
-            src="https://maps.google.com/maps?q=5%20A.Azizbeyov,%20Baku,%20AZerbaijan%20AZ1077&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=5%20A.Azizbayov&t=&z=13&ie=UTF8&iwloc=&output=embed"
             frameborder="0"
             scrolling="no"
-            marginheight="0"
+            marginheight="10"
             marginwidth="0"
           ></iframe>
           <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
