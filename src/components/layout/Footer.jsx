@@ -45,7 +45,6 @@ const Footer = () => {
               company in this region. All of our placements are suitable.
             </p>
           </div>
-
           <div className="flex flex-row 2xl:gap-20 xl:gap-16 lg:gap-10 md:gap-10 sm:gap-7 max-sm:gap-10 text-start ">
             <div id="col2" className="flex flex-col gap-8">
               <p className="text-xl font-semibold ">Quick Links</p>
@@ -87,8 +86,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div id="col4" className="flex flex-col 2xl:gap-16 xl:gap-16 md:gap-10 max-sm:gap-10 sm:gap-10 md:items-center lg:items-center sm:items-center max-sm:items-center 2xl:items-start xl:items-start">
+        <div
+          id="col4"
+          className="flex flex-col 2xl:gap-16 xl:gap-16 md:gap-10 max-sm:gap-10 sm:gap-10 md:items-center lg:items-center sm:items-center max-sm:items-center 2xl:items-start xl:items-start"
+        >
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
             <a href={`${Social["facebook"]}`}><Facebook/></a>

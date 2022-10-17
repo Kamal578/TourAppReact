@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Tour(props) {
   const yellowStyle = { color: "#E8A908" };
   return (
-    <div className="flex flex-col items-left justify-center ">
+    <div className="flex flex-col items-left justify-center">
       <div
         style={{ backgroundImage: `url(${props.thumbnail})` }}
         className="border-transparent bg-cover bg-center rounded-lg w-[20vw] h-[70vh] m-2"
@@ -30,7 +30,7 @@ function Tour(props) {
         </p>
         <NavLink
           exact
-          to="/"
+          to="/tourInnerPage"
           className="bg-darkerGreen font-primary text-white px-5 py-4 border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-transparent hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
         >
           View Details

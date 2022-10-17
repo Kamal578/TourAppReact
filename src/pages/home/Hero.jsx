@@ -11,7 +11,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setValue((v) => {
-        return v === 2 ? 0 : v + 1;
+        return v === (images.length - 1) ? 0 : v + 1;
       });
     }, 3000);
     return () => clearInterval(interval);
@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <div
       className="h-screen  bg-cover bg-center flex flex-col items-center justify-center text-white z-0"
-      style={{ backgroundImage: `url(${images[value]})`, transition: "500ms" }}
+      style={{ backgroundImage: `url(${images[value]})`, transition: "400ms" }}
     >
       <div className="w-2/3 flex flex-col justify-center items-center">
         <p className="text-7xl font-primary font-bold mb-5">
