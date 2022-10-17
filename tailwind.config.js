@@ -34,6 +34,8 @@ module.exports = {
 
       "max-sm": { max: "639px" },
       // => @media (max-width: 639px) { ... }
+      "max-sm": { max: "639px" },
+      // => @media (max-width: 639px) { ... }
     },
     extend: {
       gridTemplateColumns: {
