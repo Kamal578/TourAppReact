@@ -17,12 +17,6 @@ const Footer = () => {
     youtube: "https://www.youtube.com/",
     linkedin: "https://www.linkedin.com/"
   }
-  const Logos = {
-    facebook: Facebook,
-    insta: Instagram,
-    youtube: YouTube,
-    linkedin: Linkedin
-  }
   return (
     <div className="px-5 sticky pb-5 pt-7 bg-darkerGreen md:px-0">
       <div
