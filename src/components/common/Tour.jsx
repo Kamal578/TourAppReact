@@ -8,9 +8,9 @@ function Tour(props) {
     <div className="flex flex-col items-left justify-center">
       <div
         style={{ backgroundImage: `url(${props.thumbnail})` }}
-        className="border-transparent bg-cover bg-center rounded-lg px-36 py-60 m-2"
+        className="border-transparent bg-cover bg-center rounded-lg w-[20vw] h-[70vh] m-2"
       ></div>
-      {/* image */}
+      {/* image */} 
       <div className="flex flex-col items-left gap-y-2">
         <p className="text-3xl text-left font-primary font-semibold text-darkerGreen">
           {props.title}
