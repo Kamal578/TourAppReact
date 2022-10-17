@@ -11,8 +11,14 @@ const Footer = () => {
     number: "+994506248822",
     email: "info@tour.com",
   };
+  const Social = {
+    facebook: "https://www.facebook.com/",
+    insta: "https://www.instagram.com",
+    youtube: "https://www.youtube.com/",
+    linkedin: "https://www.linkedin.com/"
+  }
   return (
-    <div className="sticky pb-5 pt-7 bg-darkerGreen">
+    <div className="px-5 sticky pb-5 pt-7 bg-darkerGreen md:px-0">
       <div
         id="container1"
         className="flex justify-around text-base text-white max-sm:flex-col max-sm:items-center max-sm:gap-10"
@@ -80,10 +86,10 @@ const Footer = () => {
         >
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
-            <Facebook className="cursor-pointer" />
-            <Instagram className="cursor-pointer" />
-            <YouTube className="cursor-pointer" />
-            <Linkedin className="cursor-pointer" />
+            <a href={`${Social["facebook"]}`}><Facebook/></a>
+            <a href={`${Social["instagram"]}`}><Instagram/></a>
+            <a href={`${Social["youtube"]}`}><YouTube/></a>
+            <a href={`${Social["linkedin"]}`}><Linkedin/></a>
           </div>
         </div>
       </div>
