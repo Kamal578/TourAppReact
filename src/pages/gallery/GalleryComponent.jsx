@@ -30,12 +30,25 @@ function GalleryComponent() {
 
   const imgAction = (isNext) => {
     isNext
-    ? showingId !== Data.length
-      ? setShowingId((pre) => pre + 1)
-      : setShowingId(1)
-    : showingId !== 1
-    ? setShowingId((pre) => pre - 1)
-    : setShowingId(Data.length);
+      ? showingId !== Data.length
+        ? setShowingId((pre) => pre + 1)
+        : setShowingId(1)
+      : showingId !== 1
+      ? setShowingId((pre) => pre - 1)
+      : setShowingId(Data.length);
+    // if (isNext) {
+    //   if (showingId !== Data.length) {
+    //     setShowingId((pre) => pre + 1);
+    //   } else {
+    //     setShowingId(1);
+    //   }
+    // } else {
+    //   if (showingId !== 1) {
+    //     setShowingId((pre) => pre - 1);
+    //   } else {
+    //     setShowingId(Data.length);
+    //   }
+    // }
   };
 
   return (
@@ -75,7 +88,8 @@ function GalleryComponent() {
             setModal(false);
             setShowingId(0);
           }}
-          className="bg-transparent"/>
+          className="bg-transparent"
+        />
       </div>
       <div className="flex flex-wrap items-center justify-center cursor-pointer">
         {Data.map((item) => {
