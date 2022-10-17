@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="flex items-center pt-20 2xl:flex-row md:flex-col xl:flex-row lg:flex-col sm:flex-col max-sm:flex-col max-sm:mx-12 sm:mx-16 md:mx-20 2xl:justify-center">
+    <div className="flex items-center pt-20 2xl:flex-row md:flex-col xl:flex-row lg:flex-col sm:flex-col max-sm:flex-col max-sm:mx-12 sm:mx-16 max-xss:mx-12 md:mx-20 2xl:justify-center">
       <div className="select-none	flex items-center justify-center  h-[49.5rem] font-primary">
         <div className="text-center bg-khakiDark  h-[720px] rounded-bl-[5.3rem]">
           <div>
@@ -53,7 +53,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div class="mapouter flex items-center justify-center rounded-tr-[5.3rem] 2xl:h-[745px] max-sm:w-[400px] sm:w-[450px] md:w-[500px] bg-none overflow-hidden	max-w-lg mt-6">
+      <div class="mapouter flex items-center justify-center rounded-tr-[5.3rem] 2xl:h-[745px] max-sm:w-[400px] sm:w-[450px] md:w-[500px] bg-none overflow-hidden	max-w-lg mt-6 max-xss:w-[300px]">
         <div class="gmap_canvas">
           <iframe
             width="515"
