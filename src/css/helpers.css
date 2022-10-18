@@ -73,11 +73,11 @@
   background-color: rgba(1,1,1,0.8);
   backdrop-filter: blur(6px);
   transition: opacity 400ms ease, transform 500ms ease-in-out;
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
   transform: scale(0);
   overflow: hidden;
-  z-index: 999;
+  z-index: 120;
 }
 
 .model.open {

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import { ReactComponent as JavaChipLogo } from "../../assets/icons/Javachip.svg";
 import { ReactComponent as Facebook } from "../../assets/icons/Facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/Instagram.svg";
@@ -7,6 +8,20 @@ import { ReactComponent as Linkedin } from "../../assets/icons/Linkedin.svg";
 import { NavLink, Link } from "react-router-dom";
 
 const Footer = () => {
+  useEffect(() => {
+    const getContactUs = () => {
+      const url = "http://localhost:8000/api/setting";
+      const Social = axios
+        .get(url)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    };
+  }, []);
+
   const Contact = {
     number: "+994506248822",
     email: "info@tour.com",
@@ -15,10 +30,10 @@ const Footer = () => {
     facebook: "https://www.facebook.com/",
     insta: "https://www.instagram.com",
     youtube: "https://www.youtube.com/",
-    linkedin: "https://www.linkedin.com/"
-  }
+    linkedin: "https://www.linkedin.com/",
+  };
   return (
-    <div className="px-5 sticky pb-5 pt-7 bg-darkerGreen md:px-0">
+    <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0">
       <div
         id="container1"
         className="flex justify-around text-base text-white max-sm:flex-col max-sm:items-center max-sm:gap-10"
@@ -86,16 +101,24 @@ const Footer = () => {
         >
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
-            <a href={`${Social["facebook"]}`}><Facebook/></a>
-            <a href={`${Social["instagram"]}`}><Instagram/></a>
-            <a href={`${Social["youtube"]}`}><YouTube/></a>
-            <a href={`${Social["linkedin"]}`}><Linkedin/></a>
+            <a href={`${Social["facebook"]}`}>
+              <Facebook />
+            </a>
+            <a href={`${Social["instagram"]}`}>
+              <Instagram />
+            </a>
+            <a href={`${Social["youtube"]}`}>
+              <YouTube />
+            </a>
+            <a href={`${Social["linkedin"]}`}>
+              <Linkedin />
+            </a>
           </div>
         </div>
       </div>
       <div
         id="container2"
-        className="flex flex-col items-center justify-between px-20 text-white pt-7 text-thin md:flex-row"
+        className="flex flex-col items-center justify-between px-20 text-white pt-7 text-thin md:flex-row max-xss:gap-4 max-xss:text-center max-sm:text-center max-sm:gap-4 max-xss:px-0"
       >
         <p className="text-base text-thin">
           Copyright © 2022 Tour LLC All Rights Reserved

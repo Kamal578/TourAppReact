@@ -7,11 +7,11 @@ const AgencyInfo = () => {
         <img
           src={AgencyInfoImg}
           alt={AgencyInfoImg}
-          className="2xl:w-[470px] 2xl:h-[696px] xl:w-[440px] xl:h-[660px] lg:w-[420px] lg:h-[600px] md:w-[420px] md:h-[570px] sm:w-[400px] sm:h-[550px] max-sm:w-[440px] max-sm:h-[600px]  "
+          className="2xl:w-[470px] 2xl:h-[696px] xl:w-[440px] xl:h-[660px] lg:w-[420px] lg:h-[600px] md:w-[420px] md:h-[570px] sm:w-[400px] sm:h-[550px] max-sm:w-[440px] max-sm:h-[600px]"
         />
       </div>
       <div>
-        <p className="max-w-xl text-white 2xl:text-3xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg max-sm:text-base ">
+        <p className="max-w-xl text-white max-xss:max-w-md 2xl:text-3xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg max-sm:text-base ">
           <span className="text-darkerGreen">Tour</span> travel agency is a
           private retailer or public service that provides travel and
           tourism-related services to the general public on behalf of
