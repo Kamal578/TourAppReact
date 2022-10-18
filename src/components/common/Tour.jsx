@@ -7,10 +7,10 @@ function Tour(props) {
   return (
     <div className="flex flex-col items-left justify-center">
       <div
+        id="tourImage"
         style={{ backgroundImage: `url(${props.thumbnail})` }}
-        className="border-transparent bg-cover bg-center rounded-lg px-36 py-60 m-2"
+        className="border-transparent bg-cover bg-center rounded-lg w-full h-[70vh] m-2"
       ></div>
-      {/* image */}
       <div className="flex flex-col items-left gap-y-2">
         <p className="text-3xl text-left font-primary font-semibold text-darkerGreen">
           {props.title}
@@ -21,8 +21,8 @@ function Tour(props) {
         </p>
         <p className="text-2xl text-left font-primary font-normal text-black flex flex-row gap-2 justify-between">
           <span className="flex flex-row gap-2">
-          <AiOutlineClockCircle style={yellowStyle} />
-          {props.time}
+            <AiOutlineClockCircle style={yellowStyle} />
+            {props.time}
           </span>
           <span style={yellowStyle} className="font-medium">
             {props.price}$
@@ -31,7 +31,7 @@ function Tour(props) {
         <NavLink
           exact
           to="/tourInnerPage"
-          className="bg-darkerGreen font-primary text-white px-5 py-4 border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-transparent hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
+          className="bg-darkerGreen font-primary text-white w-full h-[15vh] border-2 border-transparent rounded-lg text-2xl flex items-center justify-center hover:bg-transparent hover:border-darkerGreen hover:text-darkerGreen transition-all duration-200"
         >
           View Details
         </NavLink>
