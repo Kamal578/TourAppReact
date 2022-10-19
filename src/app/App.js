@@ -7,11 +7,13 @@ import GalleryPage from "../pages/gallery/GalleryPage";
 import Contact from "../pages/contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
 import TourInnerPage from "../pages/tourInnerPage/TourInnerPage";
+import PageNavigationHelper from "../utils/PageNavigationHelper";
 
 const App = () => {
   return (
     <div className="font-primary">
       <BrowserRouter>
+      <PageNavigationHelper/>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/tours" exact element={<Tours />} />
