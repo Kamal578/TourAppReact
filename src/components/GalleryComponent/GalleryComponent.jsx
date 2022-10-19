@@ -9,7 +9,6 @@ import img6 from "../../assets/img/gallery/gallery6.png";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-
 let Data = [
   { id: 1, imgSrc: img1 },
   { id: 2, imgSrc: img2 },
@@ -18,30 +17,41 @@ let Data = [
   { id: 5, imgSrc: img5 },
   { id: 6, imgSrc: img6 },
 ];
-
 function GalleryComponent() {
   const [showingId, setShowingId] = useState(0);
   const [modal, setModal] = useState(false);
-
+  const backPage = () => {
+    setModal(false);
+  };
   const getImg = (id) => {
     setModal(true);
     setShowingId(id);
   };
-
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
   const imgAction = (isNext) => {
     isNext
-    ? showingId !== Data.length
-      ? setShowingId((pre) => pre + 1)
-      : setShowingId(1)
-    : showingId !== 1
-    ? setShowingId((pre) => pre - 1)
-    : setShowingId(Data.length);
+      ? showingId !== Data.length
+        ? setShowingId((pre) => pre + 1)
+        : setShowingId(1)
+      : showingId !== 1
+      ? setShowingId((pre) => pre - 1)
+      : setShowingId(Data.length);
   };
-
   return (
     <>
-      <div className={modal ? "model open" : "model"}>
-        <button className="imgLeftArrow" onClick={() => imgAction(false)}>
+      <div
+        className={modal ? "model open" : "model"}
+        onClick={() => backPage()}
+      >
+        <button
+          className="imgLeftArrow"
+          onClick={(e) => {
+            stopPropagation(e);
+            imgAction(false);
+          }}
+        >
           <MdArrowBackIos
             className="icon"
             style={{
@@ -58,8 +68,15 @@ function GalleryComponent() {
               : ""
           }
           alt="tempImg"
+          onClick={stopPropagation}
         />
-        <button className="imgRightArrow" onClick={() => imgAction(true)}>
+        <button
+          className="imgRightArrow"
+          onClick={(e) => {
+            stopPropagation(e);
+            imgAction(true);
+          }}
+        >
           <MdArrowForwardIos
             className="icon"
             style={{
@@ -74,8 +91,10 @@ function GalleryComponent() {
           onClick={() => {
             setModal(false);
             setShowingId(0);
+            stopPropagation();
           }}
-          className="bg-transparent"/>
+          className="bg-transparent"
+        />
       </div>
       <div className="flex flex-wrap items-center justify-center cursor-pointer">
         {Data.map((item) => {

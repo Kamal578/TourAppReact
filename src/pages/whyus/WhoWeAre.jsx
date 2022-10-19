@@ -14,14 +14,14 @@ const WhoWeAre = () => {
           <img
             src={AboutPic}
             alt=""
-            className="max-w-lg 2xl:w-[466px] xl:w-[400px] lg:w-[400px] md:w-[400px] 2xl:h-[699px] xl:h-[600px] lg:h-[550px] md:h-[550px] max-sm:h-[520px] max-sm:w-[350px]"
+            className="max-w-lg 2xl:w-[466px] xl:w-[400px] lg:w-[400px] md:w-[400px] 2xl:h-[699px] xl:h-[600px] lg:h-[550px] md:h-[550px] max-sm:h-[520px] max-sm:w-[350px] max-xss:w-[250px] max-xss:h-[400px]"
           />
         </div>
         <div className="md:mx-auto sm:mx-auto">
           <h4 className="font-bold text-center text-darkerGreen 2xl:text-6xl md:text-5xl sm:text-4xl lg:text-5xl xl:text-5xl max-sm:text-3xl 2xl:mb-12 lg:mb-12 md:mb-7 sm:mb-5 max-sm:mb-4">
             Who we are?
           </h4>
-          <p className="max-w-2xl text-black-rgba 2xl:text-3xl xl:text-3xl lg:text-xl md:text-2xl sm:text-2xl max-sm:text-xl">
+          <p className="max-w-2xl text-black-rgba 2xl:text-3xl xl:text-3xl lg:text-xl md:text-2xl sm:text-2xl max-sm:text-lg max-xss:text-lg max-xss:mx-4 max-sm:mx-4 md:mx-4">
             We are ready to help you to spend an amazing vacation day in our
             country’s various places. Our company is a trusted professional
             company based in Azerbaijan. You will be provided with deatiled
