@@ -21,7 +21,7 @@ function Header({ color, currentPage }) {
               to="/"
               className="text-4xl font-bold select-none text-green font-logo"
             >
-              Ecoway
+              Tour.
             </NavLink>
           </div>
           <div id="NavItems" className="hidden space-x-6 md:flex">
