@@ -117,7 +117,11 @@ function GalleryComponent() {
               key={item.id}
               onClick={() => getImg(item.id)}
             >
-              <img src={item.imgSrc} alt="galleryImage" />
+              <img
+                src={item.imgSrc}
+                alt="galleryImage"
+                className="rounded-3xl"
+              />
             </div>
           );
         })}
