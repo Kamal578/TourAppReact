@@ -88,7 +88,7 @@ function Header({ color, currentPage }) {
               Contact
             </NavLink>
           </div>
-          <div id="SearchInput" className="search-box">
+          <div id="SearchInput" className="hidden text-sm search-box lg:flex">
             <button className="btn-search">
               <AiOutlineSearch
                 style={navbar ? { color: "white" } : { color: color }}
@@ -96,8 +96,8 @@ function Header({ color, currentPage }) {
             </button>
             <input
               type="text"
-              className={`input-search  hover:border-black border-black hover:border-2`}
-              placeholder="Search for tours..."
+              className={`input-search border hover:border-2`}
+              placeholder="Search"
               style={{ color: color, "::placeholder": color }}
             />
           </div>

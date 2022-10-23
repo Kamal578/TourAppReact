@@ -133,6 +133,7 @@ option {
 
 .navbar.active {
   background-color: rgb(7 91 25 / 57%);
+  color: white !important;
   backdrop-filter: blur(6px);
 }
 
