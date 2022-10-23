@@ -52,10 +52,10 @@ export default function UpcomingTours() {
   })
   return (
     <div className="flex flex-col items-center justify-center my-10 bg-white h-100">
-      <p className="mb-10 font-bold text-center text-7xl text-darkerGreen font-primary">
+      <p className="mb-10 text-5xl font-bold text-center max-xss:text-3xl md:text-7xl text-darkerGreen font-primary">
         Upcoming Tours
       </p>
-      <div className="flex flex-col items-center flex-wrap justify-center gap-x-3 md:flex-row">
+      <div className="flex flex-col flex-wrap items-center justify-center gap-x-3 md:flex-row">
         {/* <Tour
           title="Baku City Tour"
           date="01-08.10.2022"

@@ -115,7 +115,7 @@ function Header({ color, currentPage }) {
           <div className="flex md:hidden">
             <button onClick={() => setIsNavOpen(true)}>
               <AiOutlineMenu
-                className={`text-3xl cursor-pointer font-bold text-${color}`}
+                className={`text-3xl cursor-pointer max-xss:mr-4 font-bold text-${color}`}
               />
             </button>
             <div
