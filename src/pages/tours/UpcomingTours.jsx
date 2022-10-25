@@ -53,10 +53,10 @@ export default function UpcomingTours() {
   })
   return (
     <div className="flex flex-col items-center justify-center mt-10 bg-white ">
-      <p className="mb-10 font-bold text-center text-2xl text-darkerGreen font-primary md:text-7xl">
+      <p className="mb-10 text-2xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
         Upcoming Tours
       </p>
-      <div className="flex flex-col items-center justify-center bg-akaroa pt-24 w-full gap-x-3 md:flex-row">
+      <div className="flex flex-col items-center justify-center w-full pt-24 bg-akaroa gap-x-3 md:flex-row">
         {/* <Tour
           title="Baku City Tour"
           date="01-08.10.2022"
@@ -87,7 +87,7 @@ export default function UpcomingTours() {
         /> */}
         {Tours}
       </div>
-      <div className="w-full flex items-center justify-center py-10 bg-akaroa text-2xl font-semibold">
+      <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">
         <NavLink
           exact
           to="/tours"

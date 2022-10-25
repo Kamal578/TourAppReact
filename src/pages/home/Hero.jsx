@@ -19,15 +19,15 @@ export default function Hero() {
 
   return (
     <div
-      className="h-screen  bg-cover bg-center flex flex-col items-center justify-center text-white z-0"
+      className="z-0 flex flex-col items-center justify-center h-screen text-white bg-center bg-cover"
       style={{ backgroundImage: `url(${images[value]})`, transition: "400ms" }}
     >
-      <div className="w-2/3 flex flex-col justify-center items-center">
-        <p className="text-7xl font-primary font-bold mb-5">
+      <div className="flex flex-col items-center justify-center w-2/3">
+        <p className="mb-5 font-bold 2xl:text-7xl xl:text-6xl md:text-6xl max-sm:text-5xl sm:text-6xl font-primary max-sm:mt-12">
           Discover incredible <span className="text-green">places in</span>{" "}
           Azerbaijan
         </p>
-        <p className="text-2xl font-primary font-semibold mt-5 mb-10">
+        <p className="mt-5 mb-10 font-semibold 2xl:text-2xl max-sm:text-lg sm:text-xl font-primary">
           We are ready to guide you to travel in places in Azerbaijan with
           information for all of them
         </p>
@@ -35,7 +35,7 @@ export default function Hero() {
       <NavLink
         exact
         to="/tours"
-        className="text-3xl mt-7 font-primary font-normal border-2 border-white rounded-full py-3 px-5 hover:border-white hover:text-green hover:bg-white transition-all duration-200"
+        className="px-5 py-3 text-3xl font-normal transition-all duration-200 border-2 border-white rounded-full mt-7 font-primary hover:border-white hover:text-green hover:bg-white"
       >
         {" "}
         Explore

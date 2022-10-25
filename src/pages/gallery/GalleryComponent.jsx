@@ -11,12 +11,22 @@ import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
 let Data = [
-  { id: 1, imgSrc: img1 },
+  { id: 1, imgSrc: img2 },
   { id: 2, imgSrc: img2 },
   { id: 3, imgSrc: img3 },
   { id: 4, imgSrc: img4 },
   { id: 5, imgSrc: img5 },
   { id: 6, imgSrc: img6 },
+  { id: 7, imgSrc: img2 },
+  { id: 8, imgSrc: img2 },
+  { id: 9, imgSrc: img3 },
+  { id: 10, imgSrc: img4 },
+  { id: 11, imgSrc: img5 },
+  { id: 12, imgSrc: img6 },
+  { id: 13, imgSrc: img2 },
+  { id: 14, imgSrc: img2 },
+  { id: 15, imgSrc: img3 },
+  { id: 16, imgSrc: img4 },
 ];
 
 function GalleryComponent() {
@@ -27,7 +37,12 @@ function GalleryComponent() {
     setModal(true);
     setShowingId(id);
   };
-
+  const backPage = () => {
+    setModal(false);
+  };
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
   const imgAction = (isNext) => {
     isNext
       ? showingId !== Data.length
@@ -36,25 +51,21 @@ function GalleryComponent() {
       : showingId !== 1
       ? setShowingId((pre) => pre - 1)
       : setShowingId(Data.length);
-    // if (isNext) {
-    //   if (showingId !== Data.length) {
-    //     setShowingId((pre) => pre + 1);
-    //   } else {
-    //     setShowingId(1);
-    //   }
-    // } else {
-    //   if (showingId !== 1) {
-    //     setShowingId((pre) => pre - 1);
-    //   } else {
-    //     setShowingId(Data.length);
-    //   }
-    // }
   };
 
   return (
     <>
-      <div className={modal ? "model open" : "model"}>
-        <button className="imgLeftArrow" onClick={() => imgAction(false)}>
+      <div
+        className={modal ? "model open" : "model"}
+        onClick={() => backPage()}
+      >
+        <button
+          className="imgLeftArrow"
+          onClick={(e) => {
+            stopPropagation(e);
+            imgAction(false);
+          }}
+        >
           <MdArrowBackIos
             className="icon"
             style={{
@@ -71,8 +82,15 @@ function GalleryComponent() {
               : ""
           }
           alt="tempImg"
+          onClick={stopPropagation}
         />
-        <button className="imgRightArrow" onClick={() => imgAction(true)}>
+        <button
+          className="imgRightArrow"
+          onClick={(e) => {
+            stopPropagation(e);
+            imgAction(true);
+          }}
+        >
           <MdArrowForwardIos
             className="icon"
             style={{
@@ -82,23 +100,27 @@ function GalleryComponent() {
             }}
           />
         </button>
-
         <AiOutlineClose
           onClick={() => {
             setModal(false);
             setShowingId(0);
+            stopPropagation();
           }}
           className="bg-transparent"
         />
       </div>
-      <div className="flex flex-wrap items-center justify-center cursor-pointer">
+      <div className="max-w-6xl gap-3 mx-auto space-y-3 sm:columns-1 max-xss:columns-1 md:columns-3 lg:columns-4 2xl:columns-4 pb-28 sm:mx-4 max-xss:mx-4">
         {Data.map((item) => {
           return (
-            <div className="pics" key={item.id} onClick={() => getImg(item.id)}>
+            <div
+              className="break-inside-avoid pics"
+              key={item.id}
+              onClick={() => getImg(item.id)}
+            >
               <img
                 src={item.imgSrc}
-                style={{ height: "20rem", width: "25rem" }}
                 alt="galleryImage"
+                className="rounded-3xl"
               />
             </div>
           );

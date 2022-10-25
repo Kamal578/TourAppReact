@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
+import { ImCross } from "react-icons/im";
 
 function Header({ color, currentPage }) {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
@@ -12,7 +14,7 @@ function Header({ color, currentPage }) {
     window.addEventListener("scroll", changeBackground);
   });
   return (
-    <div className="w-full">
+    <div className="w-full select-none">
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="flex items-center justify-between">
           <div className="ml-2">
@@ -21,7 +23,7 @@ function Header({ color, currentPage }) {
               to="/"
               className="text-4xl font-bold select-none text-green font-logo"
             >
-              Ecoway
+              Tour.
             </NavLink>
           </div>
           <div id="NavItems" className="hidden space-x-6 md:flex">
@@ -86,7 +88,7 @@ function Header({ color, currentPage }) {
               Contact
             </NavLink>
           </div>
-          <div id="SearchInput" className="search-box">
+          <div id="SearchInput" className="hidden text-sm search-box lg:flex">
             <button className="btn-search">
               <AiOutlineSearch
                 style={navbar ? { color: "white" } : { color: color }}
@@ -94,12 +96,12 @@ function Header({ color, currentPage }) {
             </button>
             <input
               type="text"
-              className={`input-search  hover:border-black border-black hover:border-2`}
-              placeholder="Search for tours..."
+              className={`input-search border hover:border-2`}
+              placeholder="Search"
               style={{ color: color, "::placeholder": color }}
             />
           </div>
-          <div id="LanguageSelector" className="">
+          <div id="LanguageSelector" className="hidden md:flex">
             <select
               className={`text-${
                 navbar ? "white" : color
@@ -109,6 +111,108 @@ function Header({ color, currentPage }) {
               <option value="aze">Aze</option>
               <option value="rus">Rus</option>
             </select>
+          </div>
+          <div className="flex md:hidden">
+            <button onClick={() => setIsNavOpen(true)}>
+              <AiOutlineMenu
+                className={`text-3xl cursor-pointer max-xss:mr-4 font-bold text-${color}`}
+              />
+            </button>
+            <div
+              id="NavItems"
+              className={isNavOpen ? "showMenuNav" : "hideMenuNav"}
+            >
+              <div className="ml-auto mr-16">
+                <button onClick={() => setIsNavOpen(false)}>
+                  <ImCross className="text-white" />
+                </button>
+              </div>
+              <NavLink
+                exact
+                to={"/"}
+                className={
+                  navbar
+                    ? `header-link ${currentPage === 1 && "border-green"}`
+                    : `header-link active ${
+                        currentPage === 1 && "border-green"
+                      }`
+                }
+                style={{ color: "white" }}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                exact
+                to={"/tours"}
+                className={
+                  navbar
+                    ? `header-link ${currentPage === 2 && "border-green"}`
+                    : `header-link active ${
+                        currentPage === 2 && "border-green"
+                      }`
+                }
+                style={{ color: "white" }}
+              >
+                Tours
+              </NavLink>
+              <NavLink
+                exact
+                to={"/gallery"}
+                className={
+                  navbar
+                    ? `header-link ${currentPage === 3 && "border-green"}`
+                    : `header-link active ${
+                        currentPage === 3 && "border-green"
+                      }`
+                }
+                style={{ color: "white" }}
+              >
+                Gallery
+              </NavLink>
+              <NavLink
+                exact
+                to={"/whyUs"}
+                className={
+                  navbar
+                    ? `header-link ${currentPage === 4 && "border-green"}`
+                    : `header-link active ${
+                        currentPage === 4 && "border-green"
+                      }`
+                }
+                style={{ color: "white" }}
+              >
+                Why us
+              </NavLink>
+              <NavLink
+                exact
+                to={"/contact"}
+                className={
+                  navbar
+                    ? `header-link ${currentPage === 5 && "border-green"}`
+                    : `header-link active ${
+                        currentPage === 5 && "border-green"
+                      }`
+                }
+                style={{ color: "white" }}
+              >
+                Contact
+              </NavLink>
+              <div id="LanguageSelector" className="">
+                <select
+                  className={`text-white flex items-center pr-1 text-3xl bg-transparent`}
+                >
+                  <option value="eng" className="text-black">
+                    Eng
+                  </option>
+                  <option value="aze" className="text-black">
+                    Aze
+                  </option>
+                  <option value="rus" className="text-black">
+                    Rus
+                  </option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
