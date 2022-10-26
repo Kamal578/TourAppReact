@@ -36,11 +36,38 @@ export default function UpcomingTours() {
       time: "10:00 - 23:00",
       price: 100,
     },
+    {
+      thumbnail: Baku,
+      title: "Baku City Tour",
+      date: "01-08.10.2022",
+      time: "10:00 - 23:00",
+      price: 100,
+    },
+    {
+      thumbnail: Sheki,
+      title: "Baku, Sheki",
+      date: "01-08.10.2022",
+      time: "10:00 - 23:00",
+      price: 100,
+    },
+    {
+      thumbnail: Guba,
+      title: "Quba,Shamakhi",
+      date: "01-08.10.2022",
+      time: "10:00 - 23:00",
+      price: 100,
+    },
+    {
+      thumbnail: Gusar,
+      title: "Quba, Qusar",
+      date: "01-08.10.2022",
+      time: "10:00 - 23:00",
+      price: 100,
+    },
   ];
   let Tours = [];
-
-
-  TourInfoExample.forEach((tour)=>{
+  for (let i = 0; i < 4; i++){
+    let tour = TourInfoExample[i];
     Tours.push(
       <Tour
         title={tour.title}
@@ -50,41 +77,13 @@ export default function UpcomingTours() {
         price={tour.price}
       />
     );
-  })
+  }
   return (
     <div className="flex flex-col items-center justify-center mt-10 bg-white ">
       <p className="mb-10 text-2xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
         Upcoming Tours
       </p>
       <div className="flex flex-col items-center justify-center w-full pt-24 bg-akaroa gap-x-3 md:flex-row">
-        {/* <Tour
-          title="Baku City Tour"
-          date="01-08.10.2022"
-          time="10:00 - 23:00"
-          thumbnail={Baku}
-          price={100}
-        />
-        <Tour
-          title="Baku, Sheki"
-          date="01-08.10.2022"
-          time="10:00 - 23:00"
-          thumbnail={Sheki}
-          price={100}
-        />
-        <Tour
-          title="Quba, Shamakhi"
-          date="01-08.10.2022"
-          time="10:00 - 23:00"
-          thumbnail={Guba}
-          price={100}
-        />
-        <Tour
-          title="Quba, Qusar"
-          date="01-08.10.2022"
-          time="10:00 - 23:00"
-          thumbnail={Gusar}
-          price={100}
-        /> */}
         {Tours}
       </div>
       <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">

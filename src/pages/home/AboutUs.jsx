@@ -13,7 +13,7 @@ function AboutUs() {
           className="border-transparent bg-center bg-no-repeat bg-cover rounded-lg h-[100vh] w-[100%] md:w-[40vw]"
         ></div>
         <div id="text" className="flex flex-col gap-3 text-3xl font-thin w-[50vw]">
-          <p className="text-3xl w-[50vw]">
+          <p className="text-2xl md:text-3xl w-full md:w-[50vw]">
             We are ready to help you to spend an amazing vacation day in our
             country's various places. Our company is a trusted professional
             company based in Azerbaijan. You will be provided with deatiled
