@@ -33,7 +33,7 @@ const Footer = () => {
     linkedin: "https://www.linkedin.com/",
   };
   return (
-    <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0">
+    <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0 max-w">
       <div
         id="container1"
         className="flex justify-around text-base text-white max-sm:flex-col max-sm:items-center max-sm:gap-10"

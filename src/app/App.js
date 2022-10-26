@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, {useLayoutEffect} from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Tours from "../pages/tours/Tours";
 import WhyUs from "../pages/whyus/WhyUs";
@@ -7,13 +7,20 @@ import GalleryPage from "../pages/gallery/GalleryPage";
 import Contact from "../pages/contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
 import TourInnerPage from "../pages/tourInnerPage/TourInnerPage";
-import PageNavigationHelper from "../utils/PageNavigationHelper";
+
+const Wrapper = ({children}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children
+}
 
 const App = () => {
   return (
     <div className="font-primary">
-      <BrowserRouter>
-      <PageNavigationHelper/>
+      <Router>
+        <Wrapper>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/tours" exact element={<Tours />} />
@@ -23,7 +30,8 @@ const App = () => {
           <Route path="/tourInnerPage" exact element={<TourInnerPage />} />
           <Route element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+        </Wrapper>
+      </Router>
     </div>
   );
 };
