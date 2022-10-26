@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "./Hero";
 import UpcomingTours from "./UpcomingTours";
 import Gallery from "./Gallery";
