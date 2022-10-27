@@ -60,6 +60,7 @@ function Header({ color, currentPage }) {
                   : `header-link active ${currentPage === 3 && "border-green"}`
               }
               style={navbar ? { color: "white" } : { color: color }}
+              onClick={() => setIsNavOpen(false)}
             >
               Gallery
             </NavLink>
@@ -72,6 +73,7 @@ function Header({ color, currentPage }) {
                   : `header-link active ${currentPage === 4 && "border-green"}`
               }
               style={navbar ? { color: "white" } : { color: color }}
+              onClick={() => setIsNavOpen(false)}
             >
               Why us
             </NavLink>
@@ -84,11 +86,15 @@ function Header({ color, currentPage }) {
                   : `header-link active ${currentPage === 5 && "border-green"}`
               }
               style={navbar ? { color: "white" } : { color: color }}
+              onClick={() => setIsNavOpen(false)}
             >
               Contact
             </NavLink>
           </div>
-          <div id="SearchInput" className="hidden text-sm search-box lg:flex">
+          <div
+            id="SearchInput"
+            className="flex text-sm search-box md:focus:max-w-[100px] 2xl:focus:w-[300px] lg:focus:w-[250px] focus:w-[60px]"
+          >
             <button className="btn-search">
               <AiOutlineSearch
                 style={navbar ? { color: "white" } : { color: color }}
@@ -199,15 +205,15 @@ function Header({ color, currentPage }) {
               </NavLink>
               <div id="LanguageSelector" className="">
                 <select
-                  className={`text-white flex items-center pr-1 text-3xl bg-transparent`}
+                  className={`text-white flex items-center text-xl bg-transparent`}
                 >
-                  <option value="eng" className="text-black">
+                  <option value="eng" className="text-lg text-black">
                     Eng
                   </option>
-                  <option value="aze" className="text-black">
+                  <option value="aze" className="text-lg text-black">
                     Aze
                   </option>
-                  <option value="rus" className="text-black">
+                  <option value="rus" className="text-lg text-black">
                     Rus
                   </option>
                 </select>

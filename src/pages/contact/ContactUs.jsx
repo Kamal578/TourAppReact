@@ -56,6 +56,7 @@ const ContactUs = () => {
       <div class="mapouter flex items-center justify-center rounded-tr-[5.3rem] 2xl:h-[745px] max-sm:w-[400px] sm:w-[450px] md:w-[500px] bg-none overflow-hidden	max-w-lg mt-6 max-xss:w-[300px] max-xss:rounded-br-[5.3rem] max-xss:rounded-bl-[5.3rem] max-xss:rounded-tl-[5.3rem]">
         <div class="gmap_canvas">
           <iframe
+            title="test"
             width="515"
             height="720"
             id="gmap_canvas"
