@@ -20,6 +20,8 @@
   background-color: transparent;
   padding-right: 40px;
   color: #fff;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 .input-search::placeholder {
   color: white;
