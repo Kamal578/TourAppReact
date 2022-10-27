@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Hero from "./Hero";
 import UpcomingTours from "./UpcomingTours";
 import Gallery from "./Gallery";
@@ -6,7 +6,6 @@ import Header from "../../components/layout/Header";
 import HowItWorks from "./HowItWorks";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
-import Footer from "../../components/layout/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
       <HowItWorks />
       <AboutUs />
       <Contact />
-      <Footer />
     </>
   );
 }
