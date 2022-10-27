@@ -16,7 +16,7 @@ const Contact = () => {
           <form className="px-8 pt-6 pb-8 mb-4 text-white rounded 2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base max-sm:text-base">
             <div className="mb-4">
               <input
-                className="w-full px-3 py-5 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base placeholder:pl-5"
+                className="w-full px-3 py-5 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-sm max-sm:placeholder:text-xs placeholder:pl-5"
                 id="name"
                 type="text"
                 placeholder="Name"
@@ -24,7 +24,7 @@ const Contact = () => {
             </div>
             <div className="mb-6">
               <input
-                className="w-full px-3 py-5 mb-3 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base placeholder:pl-3"
+                className="w-full px-3 py-5 mb-3 leading-tight bg-transparent border border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-sm max-sm:placeholder:text-xs placeholder:pl-3"
                 id="email"
                 type="text"
                 placeholder="Email or phone number"
@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
             <div className="mb-3">
               <textarea
-                className="w-full px-3 py-5 mb-3 bg-transparent border resize-none border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-base max-sm:placeholder:text-base h-36 placeholder:pl-5"
+                className="w-full px-3 py-5 mb-3 bg-transparent border resize-none border-darkerGreen rounded-xl placeholder:text-white 2xl:placeholder:text-xl xl:placeholder:text-xl lg:placeholder:text-lg md:placeholder:text-lg sm:placeholder:text-sm max-sm:placeholder:text-xs h-36 placeholder:pl-5"
                 name="message"
                 id="message"
                 cols="30"
@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-between">
               <button
-                className="w-full px-4 py-5 text-white transition-all duration-300 border-2 2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base max-sm:text-bas bg-darkerGreen border-darkerGreen rounded-xl hover:bg-transparent"
+                className="w-full px-4 py-5 text-white transition-all duration-300 border-2 2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base max-sm:text-sm bg-darkerGreen border-darkerGreen rounded-xl hover:bg-transparent"
                 type="submit"
               >
                 Send your message
