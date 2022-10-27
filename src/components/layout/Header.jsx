@@ -93,7 +93,7 @@ function Header({ color, currentPage }) {
           </div>
           <div
             id="SearchInput"
-            className="flex text-sm search-box md:focus:w-[100px] 2xl:focus:w-[300px] lg:focus:w-[250px] focus:w-[60px]"
+            className="flex text-sm search-box md:focus:max-w-[100px] 2xl:focus:w-[300px] lg:focus:w-[250px] focus:w-[60px]"
           >
             <button className="btn-search">
               <AiOutlineSearch
