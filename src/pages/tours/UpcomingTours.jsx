@@ -66,7 +66,7 @@ export default function UpcomingTours() {
     },
   ];
   let Tours = [];
-  for (let i = 0; i < 4; i++){
+  for (let i = 0; i < 4; i++) {
     let tour = TourInfoExample[i];
     Tours.push(
       <Tour
@@ -79,11 +79,14 @@ export default function UpcomingTours() {
     );
   }
   return (
-    <div className="flex flex-col items-center justify-center mt-10 bg-white ">
+    <div className="bg-akaroa flex flex-col items-center justify-center pt-10 ">
       <p className="mb-10 text-2xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
         Upcoming Tours
       </p>
-      <div className="flex flex-col items-center justify-center w-full pt-24 bg-akaroa gap-x-3 md:flex-row">
+      <div
+        className="bg-akaroa grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-[2em] justify-
+        center content-center"
+      >
         {Tours}
       </div>
       <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">
