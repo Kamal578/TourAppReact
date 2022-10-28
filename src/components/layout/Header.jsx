@@ -113,9 +113,9 @@ function Header({ color, currentPage }) {
                 navbar ? "white" : color
               } flex items-center pr-1 text-xl bg-transparen text- size-4`}
             >
-              <option value="eng">Eng</option>
-              <option value="aze">Aze</option>
-              <option value="rus">Rus</option>
+              <option value="eng" style={{color: "black"}}>Eng</option>
+              <option value="aze" style={{color: "black"}}>Aze</option>
+              <option value="rus" style={{color: "black"}}>Rus</option>
             </select>
           </div>
           <div className="flex md:hidden">
