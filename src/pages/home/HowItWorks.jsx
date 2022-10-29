@@ -10,7 +10,7 @@ function HowItWorks() {
         <p className="text-4xl md:text-7xl text-center mt-10 font-bold text-darkerGreen">
           How it works?
         </p>
-        <div className="flex flex-row justify-between items-center px-5 md:px-[5rem]">
+        <div className="flex flex-col md:flex-row justify-around md:justify-between items-center px-5 md:px-[5rem]">
           <div
             id="howItWorksEl1"
             className="flex flex-col flex-wrap items-center justify-between"
@@ -20,7 +20,7 @@ function HowItWorks() {
               className="md:w-[6rem] w-[4rem]"
               alt="notepad"
             />
-            <p className="text-2xl text-greyish   font-normal text-center">
+            <p className="text-2xl text-greyish font-normal text-center">
               Explore Tours
             </p>
           </div>
