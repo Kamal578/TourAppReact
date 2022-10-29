@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ReactComponent as JavaChipLogo } from "../../assets/icons/Javachip.svg";
 import { ReactComponent as Facebook } from "../../assets/icons/Facebook.svg";
@@ -8,30 +8,33 @@ import { ReactComponent as Linkedin } from "../../assets/icons/Linkedin.svg";
 import { NavLink, Link } from "react-router-dom";
 
 const Footer = () => {
+  const [contactData, setContactData] = useState("");
+  const [socialData, setSocialData] = useState("");
+  const url = "https://admintour.thejavachip.com/api/setting";
   useEffect(() => {
-    const getContactUs = () => {
-      const url = "http://localhost:8000/api/setting";
-      const Social = axios
+    const getContactsData = async () => {
+      await axios
         .get(url)
-        .then(function (response) {
-          console.log(response);
+        .then((response) => {
+          setContactData(response.data.data.contacts);
         })
-        .catch(function (error) {
+        .catch((error) => {
           console.log(error);
         });
     };
-  }, []);
-
-  const Contact = {
-    number: "+994506248822",
-    email: "info@tour.com",
-  };
-  const Social = {
-    facebook: "https://www.facebook.com/",
-    insta: "https://www.instagram.com",
-    youtube: "https://www.youtube.com/",
-    linkedin: "https://www.linkedin.com/",
-  };
+    getContactsData();
+    const getSocialData = async () => {
+      await axios
+        .get(url)
+        .then((response) => {
+          setSocialData(response.data.data.socials);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
+    getSocialData();
+  });
   return (
     <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0 max-w">
       <div
@@ -48,10 +51,7 @@ const Footer = () => {
               Tour.
             </NavLink>
             <p className="max-w-sm mt-10 2xl:text-base xl:text-base lg:text-sm md:text-sm max-sm:text-base">
-              We are a trusted travel company in Azerbaijan. Our main goal is to
-              provide confortable tours for our clients. We have professional
-              services for you to be accessed. Our company is a highly created
-              company in this region. All of our placements are suitable.
+              {contactData[5].display_name}
             </p>
           </div>
           <div className="flex flex-row 2xl:gap-20 xl:gap-16 lg:gap-10 md:gap-10 sm:gap-7 max-sm:gap-10 text-start ">
@@ -79,17 +79,20 @@ const Footer = () => {
                   className="text-sm "
                   href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
                 >
-                  5 A.Azizbeyov, Baku, AZerbaijan AZ1077
-                </a>
-                <a className="text-sm " href={"tel:" + Contact["number"]}>
-                  {Contact["number"]}{" "}
+                  {contactData[0].display_name}
                 </a>
                 <a
                   className="text-sm "
-                  href={"mailto:" + Contact["email"]}
+                  href={"tel:" + contactData[1].display_name}
+                >
+                  {contactData[1].display_name}
+                </a>
+                <a
+                  className="text-sm "
+                  href={"mailto:" + contactData[2].display_name}
                   to="/"
                 >
-                  {Contact["email"]}
+                  {contactData[2].display_name}
                 </a>
               </div>
             </div>
@@ -101,16 +104,16 @@ const Footer = () => {
         >
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
-            <a href={`${Social["facebook"]}`}>
+            <a href={socialData[0].display_name}>
               <Facebook />
             </a>
-            <a href={`${Social["instagram"]}`}>
+            <a href={socialData[1].display_name}>
               <Instagram />
             </a>
-            <a href={`${Social["youtube"]}`}>
+            <a href={socialData[2].display_name}>
               <YouTube />
             </a>
-            <a href={`${Social["linkedin"]}`}>
+            <a href={socialData[3].display_name}>
               <Linkedin />
             </a>
           </div>
