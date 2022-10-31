@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tour from "../../components/common/Tour";
 import Guba from "../../assets/img/Guba.jpg";
 import Gusar from "../../assets/img/Gusar.jpg";
@@ -6,7 +6,7 @@ import Baku from "../../assets/img/tour1.jpg";
 import Sheki from "../../assets/img/Sheki.jpg";
 import { NavLink } from "react-router-dom";
 
-export default function UpcomingTours() {
+const UpcomingTours = () => {
   const TourInfoExample = [
     {
       thumbnail: Baku,
@@ -79,13 +79,12 @@ export default function UpcomingTours() {
     );
   }
   return (
-    <div className="bg-akaroa flex flex-col items-center justify-center pt-10 ">
+    <div className="flex flex-col items-center justify-center pt-10 bg-akaroa ">
       <p className="mb-10 text-2xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
         Upcoming Tours
       </p>
       <div
-        className="bg-akaroa grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-[2em] justify-
-        center content-center"
+        className="bg-akaroa grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-[2em] justify-center content-center"
       >
         {Tours}
       </div>
@@ -100,4 +99,5 @@ export default function UpcomingTours() {
       </div>
     </div>
   );
-}
+};
+export default UpcomingTours;
