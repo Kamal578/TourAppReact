@@ -10,7 +10,7 @@ function HowItWorks() {
         <p className="mt-10 text-4xl font-bold text-center md:text-7xl text-darkerGreen">
           How it works?
         </p>
-        <div className="flex flex-col md:flex-row justify-around md:justify-between items-center px-5 md:px-[5rem] gap-12">
+        <div className="flex flex-col md:flex-row justify-around md:justify-around items-center px-5 md:px-[5rem] gap-12">
           <div
             id="howItWorksEl1"
             className="flex flex-col flex-wrap items-center justify-between gap-y-4"
@@ -26,7 +26,7 @@ function HowItWorks() {
           </div>
           <div
             id="howItWorksEl2"
-            className="flex flex-col items-center justify-around gap-y-4"
+            className="flex flex-col items-center justify-between gap-y-4"
           >
             <img
               src={PaperPlane}
