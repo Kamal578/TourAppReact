@@ -5,21 +5,21 @@ import { NavLink } from "react-router-dom";
 function Tour(props) {
   const yellowStyle = { color: "#E8A908" };
   return (
-    <div className="flex flex-col items-left justify-center">
+    <div className="flex flex-col justify-center items-left">
       <div
         id="tourImage"
         style={{ backgroundImage: `url(${props.thumbnail})` }}
-        className="border-transparent bg-cover bg-center rounded-lg w-full h-[70vh] m-2"
+        className="border-transparent bg-cover bg-center rounded-lg md:px-36 w-full h-[70vh] m-2"
       ></div>
-      <div className="flex flex-col items-left gap-y-2">
-        <p className="text-3xl text-left font-primary font-semibold text-darkerGreen">
+      <div className="flex flex-col items-left gap-y-4">
+        <p className="text-3xl font-semibold text-left font-primary text-darkerGreen">
           {props.title}
         </p>
-        <p className="text-2xl text-left font-primary font-normal text-black flex flex-row gap-2">
+        <p className="flex flex-row gap-2 text-2xl font-normal text-left text-black font-primary">
           <AiOutlineCalendar style={yellowStyle} />
           {props.date}
         </p>
-        <p className="text-2xl text-left font-primary font-normal text-black flex flex-row gap-2 justify-between">
+        <p className="flex flex-row justify-between gap-2 text-2xl font-normal text-left text-black font-primary">
           <span className="flex flex-row gap-2">
             <AiOutlineClockCircle style={yellowStyle} />
             {props.time}

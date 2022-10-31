@@ -1,12 +1,26 @@
 import React from "react";
+import axios from "axios";
 import Tour from "../../components/common/Tour";
 import Guba from "../../assets/img/Guba.jpg";
 import Gusar from "../../assets/img/Gusar.jpg";
 import Baku from "../../assets/img/tour1.jpg";
 import Sheki from "../../assets/img/Sheki.jpg";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
-export default function Tours() {
+const Tours = () => {
+  const url = "https://admintour.thejavachip.com/api/setting";
+  const getAllTours = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  getAllTours();
   const TourInfoExample = [
     {
       thumbnail: Baku,
@@ -80,8 +94,8 @@ export default function Tours() {
     );
   });
   return (
-    <div className="flex flex-col items-center justify-center mb-10 bg-white h-100 pt-24">
-      <p className="mb-10 font-bold text-center text-3xl text-darkerGreen font-primary md:text-7xl">
+    <div className="flex flex-col items-center justify-center pt-24 mb-10 bg-white h-100">
+      <p className="mb-10 text-3xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
         All Tours
       </p>
       <div
@@ -97,4 +111,6 @@ export default function Tours() {
       </div>
     </div>
   );
-}
+};
+
+export default Tours;
