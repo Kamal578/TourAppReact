@@ -16,7 +16,7 @@ const Footer = () => {
       await axios
         .get(url)
         .then((response) => {
-          setContactData(response.data.data.contacts);
+          setContactData(response.data.contacts);
         })
         .catch((error) => {
           console.log(error);
@@ -27,14 +27,14 @@ const Footer = () => {
       await axios
         .get(url)
         .then((response) => {
-          setSocialData(response.data.data.socials);
+          setSocialData(response.data.socials);
         })
         .catch((error) => {
           console.log(error);
         });
     };
     getSocialData();
-  });
+  }, []);
   return (
     <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0 max-w">
       <div
@@ -51,7 +51,7 @@ const Footer = () => {
               Tour.
             </NavLink>
             <p className="max-w-sm mt-10 2xl:text-base xl:text-base lg:text-sm md:text-sm max-sm:text-base">
-              {contactData[5].display_name}
+              {contactData?.address}
             </p>
           </div>
           <div className="flex flex-row 2xl:gap-20 xl:gap-16 lg:gap-10 md:gap-10 sm:gap-7 max-sm:gap-10 text-start ">
@@ -79,20 +79,17 @@ const Footer = () => {
                   className="text-sm "
                   href="https://goo.gl/maps/XsBXEinxeUDXCT9q9"
                 >
-                  {contactData[0].display_name}
+                  {contactData?.address}
+                </a>
+                <a className="text-sm " href={"tel:" + contactData[1]?.phones}>
+                  {contactData?.phones}
                 </a>
                 <a
                   className="text-sm "
-                  href={"tel:" + contactData[1].display_name}
-                >
-                  {contactData[1].display_name}
-                </a>
-                <a
-                  className="text-sm "
-                  href={"mailto:" + contactData[2].display_name}
+                  href={"mailto:" + contactData?.email}
                   to="/"
                 >
-                  {contactData[2].display_name}
+                  {contactData?.email}
                 </a>
               </div>
             </div>
@@ -104,16 +101,16 @@ const Footer = () => {
         >
           <p className="text-xl font-semibold">Social Media</p>
           <div className="flex justify-center gap-5 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col max-sm:flex-row">
-            <a href={socialData[0].display_name}>
+            <a href={socialData?.facebook}>
               <Facebook />
             </a>
-            <a href={socialData[1].display_name}>
+            <a href={socialData?.instagram}>
               <Instagram />
             </a>
-            <a href={socialData[2].display_name}>
+            <a href={socialData?.youtube}>
               <YouTube />
             </a>
-            <a href={socialData[3].display_name}>
+            <a href={socialData?.linkedin}>
               <Linkedin />
             </a>
           </div>
