@@ -9,12 +9,12 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
 const Tours = () => {
-  const url = "https://admintour.thejavachip.com/api/setting";
+  const url = "https://admintour.thejavachip.com/api/tour/";
   const getAllTours = async () => {
     await axios
       .get(url)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
       .catch((error) => {
         console.log(error);
