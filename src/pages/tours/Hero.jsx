@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Tour from "../../components/common/Tour";
-import Guba from "../../assets/img/Guba.jpg";
-import Gusar from "../../assets/img/Gusar.jpg";
-import Baku from "../../assets/img/tour1.jpg";
-import Sheki from "../../assets/img/Sheki.jpg";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
