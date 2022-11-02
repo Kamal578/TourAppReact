@@ -11,7 +11,7 @@ export default function UpcomingTours() {
       await axios
         .get(url)
         .then((response) => {
-          setTours(response.data.sliders);
+          setTours(response?.data?.sliders);
         })
         .catch((error) => {
           console.log(error);
@@ -25,16 +25,16 @@ export default function UpcomingTours() {
         Upcoming Tours
       </p>
       <div className="flex flex-col flex-wrap items-center justify-center gap-x-3 md:flex-row">
-        {/* {tours.map((tour) => (
-          <Tour
-            key={""}
-            title={""}
-            date={""}
-            time={""}
-            thumbnail={""}
-            price={""}
-          />
-        ))} */}
+        {tours?.map((tour) => (
+            <Tour
+              key={""}
+              title={""}
+              date={""}
+              time={""}
+              thumbnail={""}
+              price={""}
+            />
+          ))}
       </div>
       <div className="pt-10 text-2xl font-semibold transition-all duration-200 border-2 border-transparent text-darkerGreen font-primary hover:border-b-darkerGreen">
         <NavLink exact to="/tours">

@@ -11,7 +11,7 @@ const UpcomingTours = () => {
       await axios
         .get(url)
         .then((response) => {
-          setTours(response.data.sliders);
+          setTours(response?.data?.sliders);
         })
         .catch((error) => {
           console.log(error);
@@ -25,7 +25,7 @@ const UpcomingTours = () => {
         Upcoming Tours
       </p>
       <div className="bg-akaroa grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-[2em] justify-center content-center">
-        {tours.map((tour) => (
+        {tours?.map((tour) => (
           <Tour
             title={tour.title}
             date={tour.date}
