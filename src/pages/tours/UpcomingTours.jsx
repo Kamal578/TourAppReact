@@ -35,7 +35,7 @@ const UpcomingTours = () => {
           />
         ))}
       </div>
-      {tours.length > 0 && (
+      {tours?.length > 0 && (
         <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">
           <NavLink
             exact

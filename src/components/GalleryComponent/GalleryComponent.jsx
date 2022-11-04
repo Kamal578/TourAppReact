@@ -17,7 +17,7 @@ let Data = [
   { id: 5, imgSrc: img5 },
   { id: 6, imgSrc: img6 },
 ];
-function GalleryComponent() {
+function GalleryComponent({ photos }) {
   const [showingId, setShowingId] = useState(0);
   const [modal, setModal] = useState(false);
   const backPage = () => {
@@ -97,11 +97,11 @@ function GalleryComponent() {
         />
       </div>
       <div className="flex flex-wrap items-center justify-center cursor-pointer">
-        {Data.map((item) => {
+        {photos.map((item) => {
           return (
             <div className="pics" key={item.id} onClick={() => getImg(item.id)}>
               <img
-                src={item.imgSrc}
+                src={item.image}
                 style={{ height: "20rem", width: "25rem" }}
                 alt="galleryImage"
               />

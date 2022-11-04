@@ -40,7 +40,7 @@ const Tours = () => {
           />
         ))}
       </div>
-      {tours.length > 0 && (
+      {tours?.length > 0 && (
         <div className="pt-10 text-2xl font-semibold transition-all duration-200 border-2 border-transparent text-darkerGreen font-primary hover:border-b-darkerGreen">
           <NavLink exact to="/tours">
             View more

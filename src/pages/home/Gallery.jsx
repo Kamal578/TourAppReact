@@ -6,12 +6,12 @@ import GalleryComponent from "../../components/GalleryComponent/GalleryComponent
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/upcoming_tour";
+    const url = "https://admintour.thejavachip.com/api/gallery";
     const getAllTours = async () => {
       await axios
         .get(url)
         .then((response) => {
-          setPhotos(response?.data?.sliders);
+          setPhotos(response?.data?.gallery);
         })
         .catch((error) => {
           console.log(error);
@@ -24,8 +24,8 @@ const Gallery = () => {
       <p className="mb-10 font-bold text-center text-7xl text-darkerGreen font-primary">
         Gallery
       </p>
-      <GalleryComponent />
-      {photos.length > 0 && (
+      <GalleryComponent photos={photos} />
+      {photos?.length > 0 && (
         <NavLink
           exact
           to="/gallery"
