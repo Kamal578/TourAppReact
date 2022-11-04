@@ -35,15 +35,17 @@ const UpcomingTours = () => {
           />
         ))}
       </div>
-      <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">
-        <NavLink
-          exact
-          to="/tours"
-          className="transition-all duration-200 border-2 border-transparent text-darkerGreen font-primary hover:border-b-darkerGreen"
-        >
-          View more
-        </NavLink>
-      </div>
+      {tours.length > 0 && (
+        <div className="flex items-center justify-center w-full py-10 text-2xl font-semibold bg-akaroa">
+          <NavLink
+            exact
+            to="/tours"
+            className="transition-all duration-200 border-2 border-transparent text-darkerGreen font-primary hover:border-b-darkerGreen"
+          >
+            View more
+          </NavLink>
+        </div>
+      )}
     </div>
   );
 };

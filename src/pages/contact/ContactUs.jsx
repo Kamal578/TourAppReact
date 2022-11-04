@@ -67,8 +67,8 @@ const ContactUs = () => {
             marginwidth="0"
           ></iframe>
           <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
-          <a href="https://www.embedgooglemap.net">
-            embed responsive google map
+          <a href="https://www.embedgooglemap.net" className="opacity-0">
+            .
           </a>
         </div>
       </div>
