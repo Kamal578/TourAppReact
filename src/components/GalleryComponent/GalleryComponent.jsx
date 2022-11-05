@@ -1,22 +1,8 @@
 import React, { useState } from "react";
-// import img1 from "../../assets/img/gallery/gallery1.png";
-import img1 from "../../assets/img/Guba.jpg";
-import img2 from "../../assets/img/gallery/gallery2.png";
-import img3 from "../../assets/img/gallery/gallery3.png";
-import img4 from "../../assets/img/gallery/gallery4.png";
-import img5 from "../../assets/img/gallery/gallery5.png";
-import img6 from "../../assets/img/gallery/gallery6.png";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-let Data = [
-  { id: 1, imgSrc: img1 },
-  { id: 2, imgSrc: img2 },
-  { id: 3, imgSrc: img3 },
-  { id: 4, imgSrc: img4 },
-  { id: 5, imgSrc: img5 },
-  { id: 6, imgSrc: img6 },
-];
+
 function GalleryComponent({ photos }) {
   const [showingId, setShowingId] = useState(0);
   const [modal, setModal] = useState(false);
@@ -32,12 +18,12 @@ function GalleryComponent({ photos }) {
   };
   const imgAction = (isNext) => {
     isNext
-      ? showingId !== Data.length
+      ? showingId !== photos.length
         ? setShowingId((pre) => pre + 1)
         : setShowingId(1)
       : showingId !== 1
       ? setShowingId((pre) => pre - 1)
-      : setShowingId(Data.length);
+      : setShowingId(photos.length);
   };
   return (
     <>
@@ -64,7 +50,7 @@ function GalleryComponent({ photos }) {
         <img
           src={
             showingId !== 0
-              ? Data.find(({ id }) => id === showingId).imgSrc
+              ? photos.find(({ id }) => id === showingId).imgSrc
               : ""
           }
           alt="tempImg"
@@ -103,7 +89,7 @@ function GalleryComponent({ photos }) {
               <img
                 src={item.image}
                 style={{ height: "20rem", width: "25rem" }}
-                alt="galleryImage"
+                alt={item.title}
               />
             </div>
           );

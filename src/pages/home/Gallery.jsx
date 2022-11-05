@@ -6,7 +6,7 @@ import GalleryComponent from "../../components/GalleryComponent/GalleryComponent
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/gallery";
+    const url = "https://admintour.thejavachip.com/api/gallery/random";
     const getAllTours = async () => {
       await axios
         .get(url)
