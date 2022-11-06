@@ -3,7 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
-function GalleryComponent({ photos }) {
+const GalleryComponent = ({ photos }) => {
   const [showingId, setShowingId] = useState(0);
   const [modal, setModal] = useState(false);
   const backPage = () => {
@@ -23,7 +23,7 @@ function GalleryComponent({ photos }) {
         : setShowingId(1)
       : showingId !== 1
       ? setShowingId((pre) => pre - 1)
-      : setShowingId(photos.length);
+      : setShowingId(photos?.length);
   };
   return (
     <>
@@ -50,10 +50,14 @@ function GalleryComponent({ photos }) {
         <img
           src={
             showingId !== 0
-              ? photos.find(({ id }) => id === showingId).imgSrc
+              ? photos.find(({ id }) => id === showingId).image
               : ""
           }
-          alt="tempImg"
+          alt={
+            showingId !== 0
+              ? photos.find(({ id }) => id === showingId).title
+              : ""
+          }
           onClick={stopPropagation}
         />
         <button
@@ -87,7 +91,7 @@ function GalleryComponent({ photos }) {
           return (
             <div className="pics" key={item.id} onClick={() => getImg(item.id)}>
               <img
-                src={item.image}
+                src={`https://admintour.thejavachip.com/storage/${item?.image}`}
                 style={{ height: "20rem", width: "25rem" }}
                 alt={item.title}
               />
@@ -97,6 +101,6 @@ function GalleryComponent({ photos }) {
       </div>
     </>
   );
-}
+};
 
 export default GalleryComponent;
