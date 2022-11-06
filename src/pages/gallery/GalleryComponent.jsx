@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-
 const GalleryComponent = ({ photos }) => {
   const [showingId, setShowingId] = useState(0);
   const [modal, setModal] = useState(false);
@@ -89,7 +88,11 @@ const GalleryComponent = ({ photos }) => {
               key={item?.id}
               onClick={() => getImg(item?.id)}
             >
-              <img src={item?.image} alt={item?.title} className="rounded-3xl" />
+              <img
+                src={`https://admintour.thejavachip.com/storage/${item?.image}`}
+                alt={item?.title}
+                className="rounded-3xl"
+              />
             </div>
           );
         })}

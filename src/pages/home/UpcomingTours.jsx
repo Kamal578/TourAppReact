@@ -3,7 +3,7 @@ import Tour from "../../components/common/Tour";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
-export default function UpcomingTours() {
+const UpcomingTours = () => {
   const [tours, setTours] = useState([]);
   useEffect(() => {
     const url = "https://admintour.thejavachip.com/api/upcoming_tour";
@@ -45,4 +45,5 @@ export default function UpcomingTours() {
       )}
     </div>
   );
-}
+};
+export default UpcomingTours;

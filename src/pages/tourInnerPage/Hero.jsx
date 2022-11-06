@@ -17,17 +17,17 @@ images.forEach((image) => {
   );
 });
 
-function Hero() {
+const Hero = () => {
   return (
-    <div id="parent" className="h-screen relative">
-      <div className="grid grid-cols-2 grid-rows-2 h-full">
+    <div id="parent" className="relative h-screen">
+      <div className="grid h-full grid-cols-2 grid-rows-2">
         {gridBackground}
       </div>
-      <h1 className="text-4xl font-bold select-none text-white md:text-7xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
+      <h1 className="absolute text-4xl font-bold text-white -translate-x-1/2 -translate-y-1/2 select-none md:text-7xl top-1/2 left-1/2">
         Baku,Sheki Tour
       </h1>
     </div>
   );
-}
+};
 
 export default Hero;

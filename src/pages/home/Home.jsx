@@ -7,7 +7,7 @@ import HowItWorks from "./HowItWorks";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header currentPage={1} color="white" />
@@ -19,4 +19,5 @@ export default function Home() {
       <Contact />
     </>
   );
-}
+};
+export default Home;

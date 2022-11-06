@@ -1,9 +1,9 @@
 import React from "react";
 
-function AboutCities() {
+const AboutCities = () => {
   return (
     <div className="h-full bg-pineglade">
-      <h1 className="text-4xl md:text-7xl text-darkerGreen text-center py-10 font-bold">
+      <h1 className="py-10 text-4xl font-bold text-center md:text-7xl text-darkerGreen">
         About cities
       </h1>
       <p className="font-thin text-[#28281b] px-10 pb-10 text-2xl ">
@@ -15,6 +15,6 @@ function AboutCities() {
       </p>
     </div>
   );
-}
+};
 
 export default AboutCities;

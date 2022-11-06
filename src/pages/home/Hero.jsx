@@ -7,7 +7,7 @@ import GrandCanyon from "../../assets/img/grandcanyon.jpg";
 
 const images = [HeroBg, GazangulLake, GrandCanyon];
 
-export default function Hero() {
+const Hero = () => {
   // const [value, setValue] = useState(0);
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -43,4 +43,5 @@ export default function Hero() {
       </NavLink>
     </div>
   );
-}
+};
+export default Hero;

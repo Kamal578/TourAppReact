@@ -1,13 +1,13 @@
 import React from "react";
 import AboutPic from "../../assets/img/AboutImage.png";
 
-function AboutUs() {
+const AboutUs = () => {
   return (
-    <div className="bg-white h-full">
-      <h1 className="font-bold text-darkerGreen text-center md:text-right text-7xl pt-20 md:mr-36 mr-0 ">
+    <div className="h-full bg-white">
+      <h1 className="pt-20 mr-0 font-bold text-center text-darkerGreen md:text-right text-7xl md:mr-36 ">
         About us
       </h1>
-      <div className="flex flex-col p-10 gap-12 md:flex-row">
+      <div className="flex flex-col gap-12 p-10 md:flex-row">
         <div
           style={{ backgroundImage: `url(${AboutPic})` }}
           className="border-transparent bg-center bg-no-repeat bg-cover rounded-lg h-screen w-full md:w-[40vw]"
@@ -36,6 +36,6 @@ function AboutUs() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutUs;

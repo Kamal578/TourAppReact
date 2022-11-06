@@ -4,15 +4,15 @@ import HeydarAliyevCenter2 from "../../assets/img/HeydarAliyevCenter2.png";
 import { NavLink } from "react-router-dom";
 import KhanSarayInside from "../../assets/img/KhanSarayInside.png";
 
-function AboutTour() {
+const AboutTour = () => {
   return (
-    <div className="h-full max-w-screen pt-10">
-      <h1 className="text-center text-3xl font-bold py-10 text-darkerGreen md:text-7xl">
+    <div className="h-full pt-10 max-w-screen">
+      <h1 className="py-10 text-3xl font-bold text-center text-darkerGreen md:text-7xl">
         About the tour
       </h1>
       <div
         id="section1"
-        className="px-10 mt-10 flex flex-col gap-5 justify-center items-center md:flex-row md:px-10 md:gap-16"
+        className="flex flex-col items-center justify-center gap-5 px-10 mt-10 md:flex-row md:px-10 md:gap-16"
       >
         <div
           id="aboutTourImage1"
@@ -31,7 +31,7 @@ function AboutTour() {
       </div>
       <div
         id="section2"
-        className="px-10 mt-10 flex flex-col-reverse gap-5 justify-center items-center md:flex-row md:px-10 md:gap-16"
+        className="flex flex-col-reverse items-center justify-center gap-5 px-10 mt-10 md:flex-row md:px-10 md:gap-16"
       >
         <p className="text-2xl text-thin font-[#666666] w-[100%] md:w-[50%]">
           You can be guided by our professional team members to have an amazing
@@ -50,7 +50,7 @@ function AboutTour() {
       </div>
       <div
         id="section3"
-        className="px-10 mt-10 flex flex-col gap-5 justify-center items-center md:px-36"
+        className="flex flex-col items-center justify-center gap-5 px-10 mt-10 md:px-36"
       >
         <p className="text-2xl text-thin font-[#666666] ">
           You can be guided by our professional team members to have an amazing
@@ -82,7 +82,7 @@ function AboutTour() {
         <NavLink
           exact
           to="/gallery"
-          className="text-2xl text-center border-2 border-darkerGreen text-darkerGreen flex flex-row items-center justify-center px-5 py-3 rounded-lg font-primary font-semibold mt-5 hover:border-green hover:text-green transition-all duration-300"
+          className="flex flex-row items-center justify-center px-5 py-3 mt-5 text-2xl font-semibold text-center transition-all duration-300 border-2 rounded-lg border-darkerGreen text-darkerGreen font-primary hover:border-green hover:text-green"
         >
           See more
         </NavLink>
@@ -93,6 +93,6 @@ function AboutTour() {
       ></div>
     </div>
   );
-}
+};
 
 export default AboutTour;

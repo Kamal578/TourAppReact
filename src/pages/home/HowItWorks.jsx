@@ -3,7 +3,7 @@ import CloudCheck from "../../assets/icons/CloudCheck.svg";
 import OutlineFileSearch from "../../assets/icons/OutlineFileSearch.svg";
 import PaperPlane from "../../assets/icons/OutlinePaperPlane.svg";
 
-function HowItWorks() {
+const HowItWorks = () => {
   return (
     <div className="bg-howItWorks relative w-screen h-[80vh] bg-no-repeat bg-cover bg-center max-w-full">
       <div className="absolute top-0 flex flex-col justify-center w-full h-full gap-20 bg-white bg-whiteGradient text-7xl bg-opacity-80">
@@ -52,6 +52,6 @@ function HowItWorks() {
       </div>
     </div>
   );
-}
+};
 
 export default HowItWorks;
