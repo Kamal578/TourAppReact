@@ -5,32 +5,32 @@
 @import url("css/helpers.css");
 
 @layer components {
-    .header-link {
-        @apply text-white font-primary border-b-2 border-transparent hover:border-b-2 hover:border-green transition-all duration-300;
-    }
-    .navbar{
-        @apply fixed w-full  p-6 z-40;
-    }
+  .header-link {
+    @apply text-white transition-all duration-300 border-b-2 border-transparent font-primary hover:border-b-2 hover:border-green;
+  }
+  .navbar {
+    @apply fixed z-40 w-full p-6;
+  }
 
-    .header-link.active{
-        @apply text-white
-    }
+  .header-link.active {
+    @apply text-white;
+  }
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-    width: 15px;
-    background-color: aqua;
+  width: 15px;
+  background-color: aqua;
 }
 
 body::-webkit-scrollbar-track {
-    background-color: white;
+  background-color: white;
 }
 
 body::-webkit-scrollbar-thumb {
-    /* background-color: rgb(7 91 25); */
-    background-color: #2EEF59
+  /* background-color: rgb(7 91 25); */
+  background-color: #2eef59;
 }

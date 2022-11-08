@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
-function Tour(props) {
+const Tour = (props) => {
   const yellowStyle = { color: "#E8A908" };
   return (
     <div className="flex flex-col justify-center items-left">
@@ -38,6 +38,6 @@ function Tour(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Tour;
