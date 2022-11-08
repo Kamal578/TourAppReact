@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 
-function Header({ color, currentPage }) {
+const Header = ({ color, currentPage }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -113,9 +113,15 @@ function Header({ color, currentPage }) {
                 navbar ? "white" : color
               } flex items-center pr-1 text-xl bg-transparen text- size-4`}
             >
-              <option value="eng" style={{color: "black"}}>Eng</option>
-              <option value="aze" style={{color: "black"}}>Aze</option>
-              <option value="rus" style={{color: "black"}}>Rus</option>
+              <option value="eng" style={{ color: "black" }}>
+                Eng
+              </option>
+              <option value="aze" style={{ color: "black" }}>
+                Aze
+              </option>
+              <option value="rus" style={{ color: "black" }}>
+                Rus
+              </option>
             </select>
           </div>
           <div className="flex md:hidden">
@@ -224,6 +230,6 @@ function Header({ color, currentPage }) {
       </nav>
     </div>
   );
-}
+};
 
 export default Header;

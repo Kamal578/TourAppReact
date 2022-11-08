@@ -1,7 +1,7 @@
 import React from "react";
 import { BsYoutube } from "react-icons/bs";
 
-function Video() {
+const Video = () => {
   return (
     <div className="w-full">
       <a href="https://www.youtube.com/watch?v=0jK0ytvjv-E">
@@ -11,6 +11,6 @@ function Video() {
       </a>
     </div>
   );
-}
+};
 
 export default Video;
