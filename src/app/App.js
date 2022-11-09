@@ -20,7 +20,6 @@ const Wrapper = ({ children }) => {
   }, [location.pathname]);
   return children;
 };
-
 const App = () => {
   return (
     <div className="font-primary">

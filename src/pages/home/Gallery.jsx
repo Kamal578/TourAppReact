@@ -6,19 +6,19 @@ import GalleryComponent from "../../components/GalleryComponent/GalleryComponent
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/gallery/random";
-    const getAllTours = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setPhotos(response?.data?.gallery);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getAllTours();
   }, []);
+  const url = "https://admintour.thejavachip.com/api/gallery/random";
+  const getAllTours = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setPhotos(response?.data?.gallery);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex flex-col items-center justify-center p-10 h-100 bg-khaki">
       <p className="mb-10 font-bold text-center text-7xl text-darkerGreen font-primary">

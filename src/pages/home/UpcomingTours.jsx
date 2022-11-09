@@ -6,19 +6,19 @@ import axios from "axios";
 const UpcomingTours = () => {
   const [tours, setTours] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/upcoming_tour";
-    const getAllTours = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setTours(response?.data?.sliders);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getAllTours();
   }, []);
+  const url = "https://admintour.thejavachip.com/api/upcoming_tour";
+  const getAllTours = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setTours(response?.data?.sliders);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex flex-col items-center justify-center my-10 bg-white h-100">
       <p className="mb-10 text-5xl font-bold text-center max-xss:text-3xl md:text-7xl text-darkerGreen font-primary">
