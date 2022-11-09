@@ -6,19 +6,19 @@ import { NavLink } from "react-router-dom";
 const UpcomingTours = () => {
   const [tours, setTours] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/upcoming_tour";
-    const getAllTours = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setTours(response?.data?.sliders);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getAllTours();
   }, []);
+  const url = "https://admintour.thejavachip.com/api/upcoming_tour";
+  const getAllTours = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setTours(response?.data?.sliders);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex flex-col items-center justify-center pt-10 bg-akaroa ">
       <p className="mb-10 text-2xl font-bold text-center text-darkerGreen font-primary md:text-7xl">

@@ -7,19 +7,19 @@ import { useEffect } from "react";
 const Tours = () => {
   const [tours, setTours] = useState([]);
   useEffect(() => {
-    const url = "https://admintour.thejavachip.com/api/tour";
-    const getAllTours = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setTours(response?.data?.sliders);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getAllTours();
   }, []);
+  const url = "https://admintour.thejavachip.com/api/tour";
+  const getAllTours = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setTours(response?.data?.sliders);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex flex-col items-center justify-center pt-24 mb-10 bg-white h-100">
       <p className="mb-10 text-3xl font-bold text-center text-darkerGreen font-primary md:text-7xl">
