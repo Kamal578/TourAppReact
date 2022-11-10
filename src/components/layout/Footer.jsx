@@ -12,29 +12,29 @@ const Footer = () => {
   const [socialData, setSocialData] = useState("");
   const url = "https://admintour.thejavachip.com/api/setting";
   useEffect(() => {
-    const getContactsData = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setContactData(response.data.contacts);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getContactsData();
-    const getSocialData = async () => {
-      await axios
-        .get(url)
-        .then((response) => {
-          setSocialData(response.data.socials);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
     getSocialData();
   }, []);
+  const getContactsData = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setContactData(response.data.contacts);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const getSocialData = async () => {
+    await axios
+      .get(url)
+      .then((response) => {
+        setSocialData(response.data.socials);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="sticky px-5 pb-5 pt-7 bg-darkerGreen md:px-0 max-w">
       <div
